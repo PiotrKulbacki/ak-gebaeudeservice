@@ -1,0 +1,138 @@
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
+export default function Datenschutz() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    return (
+        <div className="relative min-h-screen bg-slate-950 selection:bg-cyan-500/30 font-sans flex flex-col items-center py-20 px-4 sm:px-6 overflow-hidden">
+            
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+            <header className="absolute top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50">
+                <div className="bg-slate-950/60 backdrop-blur-2xl border border-white/10 rounded-full px-6 py-3 flex justify-between items-center shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+                    <Link to="/" className="flex items-center gap-2 text-gray-300 hover:text-cyan-400 transition-colors group">
+                        <svg className="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                        <span className="text-sm font-bold tracking-widest uppercase">Startseite</span>
+                    </Link>
+                </div>
+            </header>
+
+            <main className="relative z-10 w-full max-w-4xl mx-auto mt-12 bg-slate-900/60 backdrop-blur-xl border border-white/10 rounded-[2rem] p-8 sm:p-12 shadow-[0_0_40px_rgba(0,0,0,0.5)]">
+                
+                <h1 className="text-4xl sm:text-5xl font-bold mb-8 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+                    Datenschutz
+                </h1>
+
+                <div className="space-y-8 text-gray-300 font-light leading-relaxed">
+                    <p className="text-lg">
+                        Der Schutz Ihrer persönlichen Daten ist uns ein wichtiges Anliegen. Hier informieren wir Sie gemäß Art. 13 DSGVO über die Art, den Umfang und den Zweck der Verarbeitung personenbezogener Daten bei der Nutzung unserer Website.
+                    </p>
+
+                    <section>
+                        <h2 className="text-2xl font-semibold text-cyan-400 mb-4 border-b border-white/10 pb-2">1. Verantwortliche Stelle</h2>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-white/5 rounded-2xl p-6 border border-white/5">
+                            <div>
+                                <p className="font-bold text-white mb-2">Arasim & Kędzierski Gebäudeservice</p>
+                                <p>Patryk Kędzierski<br />Melli-Beese-Str. 68<br />12487 Berlin<br />Deutschland</p>
+                            </div>
+                            <div>
+                                <p className="font-bold text-white mb-2"><br className="hidden sm:block"/></p>
+                                <p>Samuel Arasim<br />Färberstr. 12<br />12555 Berlin<br />Deutschland</p>
+                                <div className="mt-4">
+                                    <p>E-Mail: <a href="mailto:info@akgebaeudeservice.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">info@akgebaeudeservice.com</a></p>
+                                    <p>Telefon: <a href="tel:+491621940328" className="text-cyan-400 hover:text-cyan-300 transition-colors">+49 162 1940328</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* NOWA SEKCJA O SZYFROWANIU - Prawnie wymagana przy formularzach */}
+                    <section>
+                        <h2 className="text-2xl font-semibold text-cyan-400 mb-4 border-b border-white/10 pb-2">2. SSL- bzw. TLS-Verschlüsselung</h2>
+                        <p>
+                            Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://“ auf „https://“ wechselt und an dem Schloss-Symbol in Ihrer Browserzeile. Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen werden.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 className="text-2xl font-semibold text-cyan-400 mb-4 border-b border-white/10 pb-2">3. Hosting & technische Bereitstellung</h2>
+                        <p className="mb-4">
+                            Unsere Website wird von der <strong className="text-white font-medium">Strato AG</strong> (Otto-Ostrowski-Straße 7, 10249 Berlin) gehostet. Beim Aufruf der Website werden automatisch Server-Logfiles erfasst, wie z. B.:
+                        </p>
+                        <ul className="list-none space-y-2 ml-2">
+                            {[
+                                "IP-Adresse des Geräts",
+                                "Datum und Uhrzeit",
+                                "Aufgerufene URL",
+                                "Referrer-URL",
+                                "Browser & Betriebssystem",
+                                "Internetdienstanbieter"
+                            ].map((item, idx) => (
+                                <li key={idx} className="flex items-center text-gray-300">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 mr-3 shadow-[0_0_5px_rgba(6,182,212,0.8)]"></span>
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                        <p className="mt-4">
+                            Diese Daten dienen der technischen Sicherheit und Fehleranalyse (Art. 6 Abs. 1 lit. f DSGVO). Ein entsprechender Vertrag zur Auftragsverarbeitung mit Strato wurde abgeschlossen.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 className="text-2xl font-semibold text-cyan-400 mb-4 border-b border-white/10 pb-2">4. Kontaktaufnahme</h2>
+                        <p>
+                            Wenn Sie uns per E-Mail oder Kontaktformular kontaktieren, verarbeiten wir Ihre Angaben zur Bearbeitung Ihrer Anfrage (Art. 6 Abs. 1 lit. b/f DSGVO). Die Daten werden gelöscht, sobald sie nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 className="text-2xl font-semibold text-cyan-400 mb-4 border-b border-white/10 pb-2">5. Cookies</h2>
+                        <p>
+                            Auf dieser Website werden nur technisch notwendige Cookies verwendet, etwa zur Speicherung Ihrer Einwilligung in die Cookie-Nutzung. Es erfolgt keine Speicherung oder Auswertung personenbezogener Daten durch Cookies zu Werbezwecken.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 className="text-2xl font-semibold text-cyan-400 mb-4 border-b border-white/10 pb-2">6. Ihre Rechte</h2>
+                        <ul className="list-none space-y-2 ml-2">
+                            {[
+                                "Auskunft über Ihre gespeicherten Daten (Art. 15 DSGVO)",
+                                "Berichtigung unrichtiger Daten (Art. 16 DSGVO)",
+                                "Löschung (Art. 17 DSGVO)",
+                                "Einschränkung der Verarbeitung (Art. 18 DSGVO)",
+                                "Datenübertragbarkeit (Art. 20 DSGVO)",
+                                "Widerspruch gegen Verarbeitung (Art. 21 DSGVO)",
+                                "Beschwerde bei einer Aufsichtsbehörde (Art. 77 DSGVO)"
+                            ].map((item, idx) => (
+                                <li key={idx} className="flex items-start text-gray-300">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 mr-3 mt-2 flex-shrink-0 shadow-[0_0_5px_rgba(6,182,212,0.8)]"></span>
+                                    <span>{item}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 className="text-2xl font-semibold text-cyan-400 mb-4 border-b border-white/10 pb-2">7. Aktualisierung dieser Hinweise</h2>
+                        <p>
+                            Diese Datenschutzerklärung wurde zuletzt im Mai 2026 aktualisiert. Änderungen aufgrund technischer Entwicklungen oder gesetzlicher Vorgaben sind jederzeit möglich.
+                        </p>
+                    </section>
+
+                    <div className="flex justify-center">
+                        <img 
+                            src="/logo5.png" 
+                            alt="Logo Arasim & Kędzierski" 
+                            className="h-24 sm:h-44 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 drop-shadow-[0_0_15px_rgba(255,255,255,0.05)]" 
+                        />
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    );
+}
