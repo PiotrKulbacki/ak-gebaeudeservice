@@ -41,18 +41,18 @@ export default async function handler(req, res) {
     const htmlTemplate = `
       <div style="font-family: sans-serif; max-width: 600px; margin: auto; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden;">
         <div style="background: #020617; padding: 20px; text-align: center;">
-          <h1 style="color: #22d3ee; margin: 0; font-size: 24px;">Anfrage: ${service_type}</h1>
+          <h1 style="color: #22d3ee; margin: 0; font-size: 24px;">Anfrage: ${service_type[0]}</h1>
         </div>
         <div style="padding: 30px; background: #ffffff; color: #1e293b;">
           <h2 style="border-bottom: 2px solid #f1f5f9; padding-bottom: 10px;">Kundendetails</h2>
-          <p><strong>Name:</strong> ${first_name} ${last_name}</p>
+          <p><strong>Name:</strong> ${first_name[0]} ${last_name[0]}</p>
           <p><strong>Firma:</strong> ${is_company[0] === 'true' ? 'Ja' : 'Nein'}</p>
-          <p><strong>E-Mail:</strong> <a href="mailto:${email}">${email}</a></p>
-          <p><strong>Telefon:</strong> ${phone}</p>
+          <p><strong>E-Mail:</strong> <a href="mailto:${email[0]}">${email[0]}</a></p>
+          <p><strong>Telefon:</strong> ${phone[0]}</p>
           
           <h2 style="border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; margin-top: 30px;">Nachricht</h2>
           <div style="background: #f8fafc; padding: 15px; border-radius: 8px; font-style: italic;">
-            "${message}"
+            "${message[0]}"
           </div>
         </div>
         <div style="background: #f1f5f9; padding: 15px; text-align: center; font-size: 12px; color: #64748b;">
@@ -64,7 +64,7 @@ export default async function handler(req, res) {
     const mailOptions = {
       from: `"Website Form" <${process.env.SMTP_USER}>`,
       to: 'info@akgebaeudeservice.com',
-      subject: `Neue Anfrage: ${service_type} - ${first_name} ${last_name}`,
+      subject: `Neue Anfrage: ${service_type[0]} - ${first_name[0]} ${last_name[0]}`,
       html: htmlTemplate,
       replyTo: email[0],
       attachments: files.attachments ? [{

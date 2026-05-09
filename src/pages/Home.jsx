@@ -1,7 +1,4 @@
 import { useRef, useEffect, useState } from 'react';
-import SplashCursor from '../SplashCursor';
-import Hyperspeed from '../Hyperspeed';
-import { hyperspeedPresets } from '../hyperspeedPresets';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence, useMotionValue, useTransform, animate, useInView } from 'framer-motion';
 
@@ -53,8 +50,6 @@ export default function Home() {
 
     return (
         <>
-            {/* <SplashCursor /> */}
-
             <header ref={menuRef} className="fixed top-4 sm:top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl z-50 transition-all duration-500">
                 <div className="bg-slate-950/60 backdrop-blur-2xl border border-cyan-500/20 rounded-full px-4 sm:px-4 py-3 flex justify-between items-center shadow-[0_0_30px_rgba(6,182,212,0.15)]">
                     
@@ -505,13 +500,6 @@ export default function Home() {
             </section>
             
             <section id="uberuns" className="relative bg-slate-950 py-24 px-6 overflow-hidden scroll-mt-20">
-                
-                {/* Efekt Hyperspeed w tle */}
-                <div className="absolute inset-0 z-0 opacity-30 pointer-events-none">
-                    <Hyperspeed effectOptions={hyperspeedPresets.one} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950"></div>
-                </div>
-
                 <div className="relative z-10 max-w-6xl mx-auto">
                     
                     <div className="text-center mb-16">
