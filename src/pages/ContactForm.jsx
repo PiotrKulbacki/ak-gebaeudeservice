@@ -20,8 +20,6 @@ export default function ContactForm() {
         attachments: null
     });
 
-    const API_URL = import.meta.env.VITE_API_URL;
-
     const [showModal, setShowModal] = useState(false);
     const [modalMessage, setModalMessage] = useState('');
     const [error, setError] = useState('');
@@ -88,9 +86,9 @@ export default function ContactForm() {
         }
 
         try {
-            const response = await fetch(`${API_URL}/contact`, {
+            const response = await fetch('/api/contact', {
                 method: 'POST',
-                body: form
+                body: form 
             });
 
             let result = {};
