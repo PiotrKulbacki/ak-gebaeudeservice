@@ -46,13 +46,26 @@ export default async function handler(req, res) {
         <div style="padding: 30px; background: #ffffff; color: #1e293b;">
           <h2 style="border-bottom: 2px solid #f1f5f9; padding-bottom: 10px;">Kundendetails</h2>
           <p><strong>Name:</strong> ${first_name[0]} ${last_name[0]}</p>
-          <p><strong>Firma:</strong> ${is_company[0] === 'true' ? 'Ja' : 'Nein'}</p>
+          <p>
+            <strong>Kundentyp:</strong>
+            ${is_company[0] === 'true' ? 'Gewerblich' : 'Privat'}
+          </p>
           <p><strong>E-Mail:</strong> <a href="mailto:${email[0]}">${email[0]}</a></p>
-          <p><strong>Telefon:</strong> ${phone[0]}</p>
+          <p>
+            <strong>Telefon:</strong>
+            <a href="tel:${phone[0]}">${phone[0]}</a>
+          </p>
+          <p>
+            <strong>Telefon:</strong>
+            ${new Date().toLocaleString('de-DE', {
+              dateStyle: 'full',
+              timeStyle: 'medium'
+            })}
+          </p>
           
           <h2 style="border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; margin-top: 30px;">Nachricht</h2>
           <div style="background: #f8fafc; padding: 15px; border-radius: 8px; font-style: italic;">
-            "${message[0]}"
+            "${message[0].replace(/\n/g, '<br>')}"
           </div>
         </div>
         <div style="background: #f1f5f9; padding: 15px; text-align: center; font-size: 12px; color: #64748b;">
