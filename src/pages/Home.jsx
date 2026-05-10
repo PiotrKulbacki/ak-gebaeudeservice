@@ -43,7 +43,7 @@ export default function Home() {
 
     const items = [
         { label: 'Leistungen', href: '#leistungen' },
-        { label: 'Einsatzgebiete', href: '#einsatzgebiete' },
+        { label: 'AK-Standard', href: '#ak-standard' },
         { label: 'Philosophie', href: '/philosophie' },
         { label: 'Über uns', href: '#uberuns' },
     ];
@@ -260,7 +260,7 @@ export default function Home() {
                                         <p className="mb-4 text-gray-300 leading-relaxed">
                                             Ein sauberes Büro ist nicht nur die Visitenkarte Ihres Unternehmens gegenüber Kunden, sondern auch die wichtigste Grundlage für ein produktives und gesundes Arbeitsklima. Wir sorgen mit unserer professionellen Unterhaltsreinigung für kompromisslose Hygiene an jedem Arbeitsplatz – zuverlässig, diskret und außerhalb Ihrer Kernarbeitszeiten.
                                         </p>
-                                        <h4 className="text-cyan-400 font-semibold mb-3 text-lg">Unsere Leistungen im Überblick:</h4>
+                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Unsere Leistungen im Überblick:</h4>
                                         <ul className="space-y-3 mb-6 text-gray-300">
                                             <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">🖥️</span> <span><strong>Arbeitsplatzreinigung:</strong> Schonende und gründliche Reinigung von Schreibtischen, Monitoren und Telefonen.</span></li>
                                             <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">✨</span> <span><strong>Sanitär & Küche:</strong> Hygienische Tiefenreinigung und Desinfektion von Waschräumen und Mitarbeiterküchen.</span></li>
@@ -270,21 +270,30 @@ export default function Home() {
                                     </>
                                 )
                             },
-                            { 
-                                title: "Reinigungsarbeiten in der Höhe", 
-                                desc: "Sichere und materialschonende Reinigung schwer erreichbarer Bereiche", 
+                            {
+                                title: "Bauendreinigung",
+                                desc: "Effiziente Beseitigung von Baustaub und Schmutz für eine perfekte Schlüsselübergabe.",
                                 img: "/Kafelki/service3.png", 
                                 details: (
                                     <>
-                                        <p className="mb-4 text-gray-300 leading-relaxed">
-                                            Arbeiten in der Höhe erfordern weit mehr als nur Schwindelfreiheit – sie verlangen technisches Know-how und kompromisslose Sicherheit. Wir beseitigen hartnäckige Verschmutzungen an schwer zugänglichen Fassaden oder Glasfronten, ohne die Bausubstanz zu gefährden. Dabei denken wir stets einen Schritt weiter als die klassische Reinigung.
+                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Bezugsfertig und makellos:</h4>
+                                        <p className="text-gray-300 mb-4 font-light leading-relaxed">
+                                            Nach Abschluss der Bau- oder Renovierungsarbeiten hinterlassen Handwerker oft hartnäckigen Schmutz. Wir sorgen für den finalen Glanz, damit Sie Ihr Objekt termingerecht und in perfektem Zustand übergeben oder beziehen können.
                                         </p>
-                                        <h4 className="text-cyan-400 font-semibold mb-3 text-lg">Unser Mehrwert für Ihre Immobilie:</h4>
-                                        <ul className="space-y-3 mb-6 text-gray-300">
-                                            <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">🔍</span> <span><strong>Zustands-Check-up:</strong> Wenn wir schon oben sind, haben wir die Augen offen. Wir melden Ihnen sofort feine Risse, verstopfte Rinnen oder lose Bauteile, bevor teure Folgeschäden entstehen.</span></li>
-                                            <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">💧</span> <span><strong>Osmose-Verfahren:</strong> Wir arbeiten oft mit entmineralisiertem Reinstwasser. Das reinigt streifenfrei ohne Chemie und verhindert statische Aufladung – Ihre Fassade bleibt nachweislich länger sauber.</span></li>
-                                            <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">🚧</span> <span><strong>Vollständige Absicherung:</strong> Kein Haftungsrisiko für Sie. Wir kümmern uns um die normgerechte Absperrung des Arbeitsbereichs am Boden und arbeiten streng nach aktuellen BG-Vorschriften.</span></li>
-                                            <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">🧽</span> <span><strong>Materialspezifische Behandlung:</strong> Wir „kärchern“ nicht blind drauf los. Egal ob historischer Putz, Eloxal oder Glas – wir passen Bürsten und Wasserdruck exakt an die Empfindlichkeit der Oberfläche an.</span></li>
+                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Unsere Leistungen umfassen:</h4>
+                                        <ul className="space-y-3 mb-8 text-gray-300 font-light">
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">🧹</span> 
+                                                <span><strong>Baugrobreinigung:</strong> Fachgerechte Entsorgung von Bauschutt, Verpackungsmaterial und grobem Dreck während der Bauphase.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">✨</span> 
+                                                <span><strong>Baufeinreinigung:</strong> Gründliche Entfernung von Baustaub, Farbspritzern, Mörtelresten und Klebestreifen.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">⏱️</span> 
+                                                <span><strong>Termintreue Garantiert:</strong> Wir arbeiten flexibel und pünktlich, damit Ihre Bauabnahme reibungslos abläuft.</span>
+                                            </li>
                                         </ul>
                                     </>
                                 )
@@ -298,7 +307,7 @@ export default function Home() {
                                         <p className="mb-4 text-gray-300 leading-relaxed">
                                             Eine gepflegte Außenanlage ist die Visitenkarte Ihrer Immobilie und steigert ihren Wert spürbar. Doch wir gehen über das bloße Rasenmähen hinaus: Wir denken proaktiv mit. Wir erkennen kranke Pflanzen rechtzeitig, beugen Wildwuchs vor und sorgen dafür, dass Ihre Grünanlagen nicht nur optisch makellos, sondern auch sicher und nachhaltig gesund sind.
                                         </p>
-                                        <h4 className="text-cyan-400 font-semibold mb-3 text-lg">Unser Service für Ihre Außenanlagen:</h4>
+                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Unser Service für Ihre Außenanlagen:</h4>
                                         <ul className="space-y-3 mb-6 text-gray-300">
                                             <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">🌿</span> <span><strong>Ganzheitliche Rasenpflege:</strong> Nicht nur Mähen, sondern auch fachgerechtes Vertikutieren, Nachsäen und Düngen für einen dichten, robusten Rasen ohne Moos.</span></li>
                                             <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">🛡️</span> <span><strong>Sicherer Baum- & Heckenschnitt:</strong> Optischer Formschnitt und präventive Entfernung von Totholz zur Erfüllung Ihrer Verkehrssicherungspflicht – das schützt Passanten und parkende Autos.</span></li>
@@ -317,7 +326,7 @@ export default function Home() {
                                         <p className="mb-4 text-gray-300 leading-relaxed">
                                             Vandalismus ist ärgerlich, aber eine falsche Reinigung macht es oft noch schlimmer. Wir entfernen Schmierereien nicht einfach nur oberflächlich, sondern sorgen dafür, dass weder unschöne Farbschatten noch Schäden an der Bausubstanz zurückbleiben. Und wir denken weiter: Mit cleverer Prävention machen wir Ihre Immobilie für Sprüher langfristig unattraktiv.
                                         </p>
-                                        <h4 className="text-cyan-400 font-semibold mb-3 text-lg">Unser Experten-Ansatz für Ihre Fassade:</h4>
+                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Unser Experten-Ansatz für Ihre Fassade:</h4>
                                         <ul className="space-y-3 mb-6 text-gray-300">
                                             <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">🛡️</span> <span><strong>Anti-Graffiti-Beschichtung:</strong> Auf Wunsch tragen wir eine unsichtbare „Opferschicht“ auf. Neue Graffitis können danach ganz einfach und kostengünstig mit Heißwasser abgewaschen werden – ohne aggressive Chemie.</span></li>
                                             <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">👻</span> <span><strong>Keine Schattenbildung (Ghosting):</strong> Wer nur mit Hochdruck arbeitet, drückt die Farbe tief in den Stein. Wir ziehen die Pigmente mit speziellen, porentiefen Lösemitteln restlos aus dem Untergrund.</span></li>
@@ -336,7 +345,7 @@ export default function Home() {
                                         <p className="mb-4 text-gray-300 leading-relaxed">
                                             Schnee und Glatteis sind nicht nur ein Hindernis, sondern vor allem ein enormes Haftungsrisiko für jeden Immobilienbesitzer. Mit unserem professionellen Winterdienst können Sie auch bei Minusgraden entspannt schlafen. Wir räumen und streuen zuverlässig, noch bevor der erste Fußgänger Ihre Wege betritt – und nehmen Ihnen dabei die volle juristische Verantwortung ab.
                                         </p>
-                                        <h4 className="text-cyan-400 font-semibold mb-3 text-lg">Sicherheit, die weiter denkt:</h4>
+                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Sicherheit, die weiter denkt:</h4>
                                         <ul className="space-y-3 mb-6 text-gray-300">
                                             <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">⚖️</span> <span><strong>Haftungsübernahme:</strong> Wir übernehmen Ihre gesetzliche Verkehrssicherungspflicht. Kommt es trotz Räumung zu einem Sturz, sind Sie rechtlich und finanziell durch unsere Versicherung geschützt.</span></li>
                                             <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">📝</span> <span><strong>Lückenlose Dokumentation:</strong> Jeder unserer Einsätze wird exakt mit Datum und Uhrzeit protokolliert. Im Schadensfall ist dieses Tourenbuch Ihr wasserdichter Nachweis für die Versicherung.</span></li>
@@ -355,7 +364,7 @@ export default function Home() {
                                         <p className="mb-4 text-gray-300 leading-relaxed">
                                             Eine Haushaltsauflösung oder Firmenräumung ist oft mit emotionalem und zeitlichem Stress verbunden. Wir nehmen Ihnen diese Last komplett ab. Ob vollgestellter Keller, komplexer Firmenumzug oder eine sensible Nachlassräumung – wir arbeiten zügig, diskret und übergeben Ihre Räumlichkeiten exakt so, wie Vermieter oder Käufer es erwarten.
                                         </p>
-                                        <h4 className="text-cyan-400 font-semibold mb-3 text-lg">Warum wir der richtige Partner sind:</h4>
+                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Warum wir der richtige Partner sind:</h4>
                                         <ul className="space-y-3 mb-6 text-gray-300">
                                             <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">🤫</span> <span><strong>Absolute Diskretion:</strong> Besonders bei sensiblen Fällen (wie Nachlässen oder Messie-Wohnungen) agieren wir äußerst respektvoll. Wir arbeiten zügig und diskret, um unnötiges Aufsehen in der Nachbarschaft zu vermeiden.</span></li>
                                             <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">♻️</span> <span><strong>Mülltrennung spart Ihr Geld:</strong> Wir werfen nicht einfach alles in einen teuren Mischcontainer. Durch unsere strikte Vorab-Trennung von Holz, Metall und Sondermüll senken wir die Entsorgungskosten auf dem Recyclinghof massiv.</span></li>
@@ -374,7 +383,7 @@ export default function Home() {
                                         <p className="mb-4 text-gray-300 leading-relaxed">
                                             Strahlend saubere Fenster bringen nicht nur mehr Tageslicht in Ihre Räume, sondern werten Ihre gesamte Immobilie optisch sofort auf. Während viele Anbieter das Glas nur oberflächlich abziehen, verstehen wir unter einer professionellen Fensterreinigung das komplette Paket. Wir kümmern uns um die versteckten Details, die oft übersehen werden, und garantieren Ihnen einen buchstäblich ungetrübten Ausblick.
                                         </p>
-                                        <h4 className="text-cyan-400 font-semibold mb-3 text-lg">Unsere Definition von echten sauberen Fenstern:</h4>
+                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Unsere Definition von echten sauberen Fenstern:</h4>
                                         <ul className="space-y-3 mb-6 text-gray-300">
                                             <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">✨</span> <span><strong>Streifenfreie Brillanz:</strong> Wir nutzen professionelles Equipment und spezielle Einwascher, die auch bei direkter Sonneneinstrahlung absolut streifen- und schlierenfreie Glasflächen hinterlassen.</span></li>
                                             <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">🔍</span> <span><strong>Rahmen- & Falzreinigung:</strong> Der „Aha-Effekt“ für unsere Kunden: Wir reinigen nicht nur die Scheibe, sondern wischen die Rahmen feucht ab und entfernen den hartnäckigen, schwarzen Schmutz aus den inneren Fensterfalzen und Dichtungen.</span></li>
@@ -434,72 +443,125 @@ export default function Home() {
                 </div>
             </section>
 
-            <section id="einsatzgebiete" className="relative bg-slate-950 py-24 px-6 md:px-10 overflow-hidden" style={{ scrollMarginTop: '80px' }}>
+            <section id="ak-standard" className="relative bg-slate-950 py-24 px-6 md:px-10 overflow-hidden" style={{ scrollMarginTop: '80px' }}>
                 
-                {/* Mapa w tle w stylu "Radar / Command Center" */}
-                <div className="absolute inset-0 z-0 opacity-30 pointer-events-none">
-                    <img src="/WorldMap.png" alt="World Map" className="absolute inset-0 w-full h-full object-cover" />
-                    {/* Gradient, który płynnie wtapia mapę w ciemne tło strony */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-cyan-900/20 to-slate-950"></div>
+                {/* Abstrakcyjne, luksusowe tło */}
+                <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
+                    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-500/10 blur-[150px] rounded-full"></div>
+                    <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-green-500/10 blur-[150px] rounded-full"></div>
                 </div>
 
-                <div className="relative z-10 max-w-6xl mx-auto px-4">
+                <div className="relative z-10 max-w-6xl mx-auto">
                     
-                    {/* Nowoczesny nagłówek sekcji */}
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">
-                            Unsere <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-500">Einsatzgebiete</span>
+                    {/* Główny przekaz - Uderzenie w emocje klienta */}
+                    <div className="text-center mb-16 md:mb-24">
+                        <motion.span 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false }}
+                            className="text-emerald-400 font-bold tracking-widest uppercase text-sm mb-4 block"
+                        >
+                            Das Rundum-Sorglos-Versprechen
+                        </motion.span>
+                        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight">
+                            Ihre Immobilie auf <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-500">Autopilot.</span>
                         </h2>
-                        <p className="text-gray-400 max-w-2xl mx-auto text-lg font-light">
-                            Wir sind in einem weiten Umkreis für Sie da. Schnell, flexibel und immer vor Ort, wenn Sie uns brauchen.
+                        <p className="text-gray-400 max-w-3xl mx-auto text-lg md:text-xl font-light leading-relaxed">
+                            Vergessen Sie unzuverlässige Dienstleister und ständige Nachkontrollen. Wir übernehmen die volle Verantwortung, denken proaktiv mit und halten Ihnen den Rücken frei – damit Sie sich auf Ihr Kerngeschäft konzentrieren können.
                         </p>
                     </div>
 
-                    {/* Szklane panele z regionami */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {/* 4 Filary Wartości (Zamiast regionów) */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
                         {[
                             {
-                                title: "Berlin",
-                                locations: ["Mitte", "Friedrichshain-Kreuzberg", "Pankow", "Charlottenburg-Wilmersdorf", "Spandau", "Steglitz-Zehlendorf", "Tempelhof-Schöneberg", "Neukölln", "Treptow-Köpenick", "Marzahn-Hellersdorf", "Lichtenberg", "Reinickendorf"]
+                                icon: "👁️",
+                                title: "Wir sehen, was getan werden muss",
+                                desc: "Kaputte Glühbirne? Ein tropfendes Rohr? Wir warten nicht auf Ihren Anruf. Unser Team meldet und behebt kleine Mängel proaktiv, bevor sie zu großen Problemen werden."
                             },
                             {
-                                title: "Brandenburg",
-                                locations: ["Falkensee", "Dallgow-Döberitz", "Hennigsdorf", "Oranienburg", "Schönwalde", "Velten", "Birkenwerder", "Leegebruch", "Hohen Neuendorf", "Stolpe", "Potsdam", "Königs Wusterhausen"]
+                                icon: "📈",
+                                title: "Werterhalt statt nur Optik",
+                                desc: "Wir putzen nicht nur oberflächlich. Durch fachgerechte Reinigung und Pflege mit professionellen Mitteln schützen wir die Bausubstanz und steigern den Wert Ihrer Immobilie langfristig."
                             },
                             {
-                                title: "Frankfurt O.",
-                                locations: ["Frankfurt (Mitte)", "Katharinenhof", "Markusviertel", "Hohenwalde", "Daltrans", "Neuberesinchen", "Markendorf", "Hohenziatz", "Biegen-Brieskow", "Markendorf-Siedlung"]
+                                icon: "🤝",
+                                title: "Ein fester Ansprechpartner",
+                                desc: "Keine Warteschleifen, keine wechselnden Subunternehmer. Sie kommunizieren direkt mit den Inhabern. Schnelle Entscheidungen und 100%ige Verlässlichkeit sind garantiert."
+                            },
+                            {
+                                icon: "شفاف", // Jeśli emoji nie pasuje, można wstawić SVG, tu symbolicznie: "🔍"
+                                icon: "🔍",
+                                title: "Absolute Transparenz",
+                                desc: "Sie wissen immer, wofür Sie bezahlen. Keine versteckten Kosten. Auf Wunsch dokumentieren wir unsere Arbeit digital, sodass Sie auch aus der Ferne immer im Bilde sind."
                             }
-                        ].map((region, index) => (
-                            <motion.div
-                                key={index}
-                                // Animacja: Płynne wyłanianie się z dołu
-                                initial={{ opacity: 0, y: 40 }}
+                        ].map((feature, idx) => (
+                            <motion.div 
+                                key={idx}
+                                initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: false, amount: 0.2 }}
-                                // Opóźnienie rosnące z każdym elementem (kaskada)
-                                transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
-                                className="bg-slate-900/50 backdrop-blur-lg border border-white/10 rounded-3xl p-8 hover:border-cyan-500/40 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] transition-all duration-300 relative overflow-hidden group"
+                                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                                className="flex gap-6 p-8 rounded-3xl bg-slate-900/40 border border-white/5 hover:border-emerald-500/30 hover:bg-slate-900/60 transition-all duration-300 group"
                             >
-                                {/* Dekoracyjna poświata wewnątrz karty */}
-                                <div className="absolute -top-10 -right-10 w-32 h-32 bg-cyan-500/10 blur-[40px] rounded-full group-hover:bg-cyan-500/20 transition-colors"></div>
-                                
-                                <h3 className="text-2xl font-bold text-white mb-6 border-b border-white/10 pb-4 inline-block w-full">
-                                    {region.title}
-                                </h3>
-                                
-                                <ul className="space-y-3">
-                                    {region.locations.map((city, cityIdx) => (
-                                        <li key={cityIdx} className="flex items-center text-gray-300 text-sm md:text-base group/item hover:text-cyan-400 transition-colors duration-200">
-                                            {/* Nowoczesny punktor zamiast zwykłej kropki */}
-                                            <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 mr-3 shadow-[0_0_5px_rgba(6,182,212,0.8)] group-hover/item:scale-150 transition-transform"></span>
-                                            {city}
-                                        </li>
-                                    ))}
-                                </ul>
+                                <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-3xl group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-slate-900 transition-all duration-300">
+                                    {feature.icon}
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">{feature.title}</h3>
+                                    <p className="text-gray-400 leading-relaxed font-light">{feature.desc}</p>
+                                </div>
                             </motion.div>
                         ))}
                     </div>
+
+                    {/* Sekcja: Jak zacząć? (Proces w 3 krokach) */}
+                    <div className="bg-gradient-to-br from-slate-900 to-slate-950 border border-emerald-500/20 rounded-[2rem] p-10 md:p-16 relative overflow-hidden">
+                        
+                        {/* Dekoracyjne linie w tle */}
+                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-emerald-500 to-transparent opacity-50"></div>
+                        
+                        <div className="text-center mb-12">
+                            <h3 className="text-2xl md:text-3xl font-bold text-white">In 3 Schritten zur sorgenfreien Immobilie</h3>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+                            {/* Linia łącząca kroki (tylko desktop) */}
+                            <div className="hidden md:block absolute top-12 left-[15%] right-[15%] h-[2px] bg-white/10 z-0">
+                                <div className="absolute top-0 left-0 h-full bg-emerald-500 w-1/2"></div>
+                            </div>
+
+                            {[
+                                { step: "01", title: "Anfrage senden", desc: "Kontaktieren Sie uns unverbindlich. Wir melden uns umgehend bei Ihnen zurück." },
+                                { step: "02", title: "Vor-Ort-Analyse", desc: "Wir besichtigen Ihr Objekt kostenlos und erstellen ein maßgeschneidertes Konzept." },
+                                { step: "03", title: "Zurücklehnen", desc: "Wir übernehmen die Arbeit. Sie genießen eine perfekt gepflegte Immobilie." }
+                            ].map((item, idx) => (
+                                <motion.div 
+                                    key={idx}
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: false }}
+                                    transition={{ duration: 0.5, delay: idx * 0.2 }}
+                                    className="relative z-10 text-center"
+                                >
+                                    <div className="w-24 h-24 mx-auto bg-slate-950 border-2 border-emerald-500 rounded-full flex items-center justify-center text-3xl font-black text-emerald-400 mb-6 shadow-[0_0_20px_rgba(16,185,129,0.2)]">
+                                        {item.step}
+                                    </div>
+                                    <h4 className="text-xl font-bold text-white mb-3">{item.title}</h4>
+                                    <p className="text-gray-400 font-light text-sm md:text-base px-4">{item.desc}</p>
+                                </motion.div>
+                            ))}
+                        </div>
+
+                        {/* Call to Action na samym dole procesu */}
+                        <div className="mt-16 text-center">
+                            <Link to="/contact" className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-emerald-500 text-slate-950 font-bold tracking-widest uppercase hover:bg-emerald-400 shadow-[0_0_30px_rgba(16,185,129,0.4)] hover:scale-105 transition-all duration-300">
+                                Jetzt Schritt 01 machen
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </Link>
+                        </div>
+                    </div>
+
                 </div>
             </section>
             

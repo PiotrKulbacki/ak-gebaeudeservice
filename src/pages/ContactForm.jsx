@@ -223,7 +223,7 @@ export default function ContactForm() {
                                     <option value="" className="bg-slate-900 text-gray-400">-- Dienstleistung --</option>
                                     <option value="Hausmeisterservice" className="bg-slate-900 text-white">Hausmeisterservice</option>
                                     <option value="Büroreinigung" className="bg-slate-900 text-white">Büroreinigung</option>
-                                    <option value="Reinigungsarbeiten in der Höhe" className="bg-slate-900 text-white">Reinigungsarbeiten in der Höhe</option>
+                                    <option value="Bauendreinigung" className="bg-slate-900 text-white">Bauendreinigung</option>
                                     <option value="Grünflächenpflege" className="bg-slate-900 text-white">Grünflächenpflege</option>
                                     <option value="Graffitientfernung" className="bg-slate-900 text-white">Graffitientfernung</option>
                                     <option value="Winterdienst" className="bg-slate-900 text-white">Winterdienst</option>
