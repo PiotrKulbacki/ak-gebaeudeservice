@@ -56,16 +56,17 @@ export default async function handler(req, res) {
             <a href="tel:${phone[0]}">${phone[0]}</a>
           </p>
           <p>
-            <strong>Telefon:</strong>
-            ${new Date().toLocaleString('de-DE', {
+            <strong>Datum:</strong>
+            new Date().toLocaleString('de-DE', {
               dateStyle: 'full',
-              timeStyle: 'medium'
-            })}
+              timeStyle: 'medium',
+              timeZone: 'Europe/Berlin'
+            })
           </p>
           
           <h2 style="border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; margin-top: 30px;">Nachricht</h2>
           <div style="background: #f8fafc; padding: 15px; border-radius: 8px; font-style: italic;">
-            "${message[0].replace(/\n/g, '<br>')}"
+            ${message[0].replace(/\n/g, '<br>')}
           </div>
         </div>
         <div style="background: #f1f5f9; padding: 15px; text-align: center; font-size: 12px; color: #64748b;">

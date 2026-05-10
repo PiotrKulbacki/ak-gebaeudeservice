@@ -23,6 +23,7 @@ export default function ContactForm() {
     const [showModal, setShowModal] = useState(false);
     const [modalMessage, setModalMessage] = useState('');
     const [error, setError] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const navigate = useNavigate();
 
     const handleChange = (e) => {
@@ -72,6 +73,8 @@ export default function ContactForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (isSubmitting) return;
+        setIsSubmitting(true);
         setError('');
 
         const form = new FormData();
@@ -108,6 +111,8 @@ export default function ContactForm() {
         } catch (err) {
             console.error("Fehler:", err);
             setError("Es ist ein Verbindungsfehler aufgetreten.");
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -237,15 +242,34 @@ export default function ContactForm() {
                             </div>
 
                             {/* Przycisk Submit z animacją pulsowania */}
-                            <motion.button 
-                                whileHover={{ scale: 1.02 }}
-                                whileTap={{ scale: 0.98 }}
-                                type="submit" 
-                                className="w-full mt-4 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold tracking-widest uppercase shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] transition-all duration-300"
+                            <motion.button
+                                whileHover={!isSubmitting ? { scale: 1.02 } : {}}
+                                whileTap={!isSubmitting ? { scale: 0.98 } : {}}
+                                type="submit"
+                                disabled={isSubmitting}
+                                className={`
+                                    w-full mt-4 py-4 rounded-xl
+                                    bg-gradient-to-r from-cyan-500 to-blue-600
+                                    text-white font-bold tracking-widest uppercase
+                                    shadow-[0_0_20px_rgba(6,182,212,0.3)]
+                                    transition-all duration-300
+                                    flex items-center justify-center gap-3
+                                    ${
+                                        isSubmitting
+                                            ? 'opacity-70 cursor-not-allowed'
+                                            : 'hover:shadow-[0_0_30px_rgba(6,182,212,0.6)]'
+                                    }
+                                `}
                             >
-                                Anfrage senden
+                                {isSubmitting ? (
+                                    <>
+                                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                                        <span>Wird gesendet...</span>
+                                    </>
+                                ) : (
+                                    'Anfrage senden'
+                                )}
                             </motion.button>
-
                         </form>
                     </motion.div>
                 </div>
