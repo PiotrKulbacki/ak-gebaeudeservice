@@ -90,13 +90,15 @@ export default function Philosophie() {
 
                 <motion.section 
                     initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.2 }}
+                    className="w-full"
                 >
                     <h2 className="text-3xl font-bold text-center text-white mb-10">Warum Wir?</h2>
-                    <div className="overflow-x-auto rounded-3xl border border-white/10 bg-slate-900/40 backdrop-blur-sm shadow-2xl">
-                        <table className="w-full text-left border-collapse">
+                    
+                    <div className="w-full overflow-x-auto rounded-3xl border border-white/10 bg-slate-900/40 backdrop-blur-sm shadow-2xl">
+                        <table className="w-full min-w-[600px] text-left border-collapse">
                             <thead>
                                 <tr className="bg-cyan-500/10 border-b border-cyan-500/20">
-                                    <th className="p-6 text-cyan-400 font-bold uppercase tracking-wider">Service-Merkmal</th>
+                                <th className="p-6 text-cyan-400 font-bold uppercase tracking-wider">Service-Merkmal</th>
                                     <th className="p-6 text-gray-400 font-semibold uppercase tracking-wider">Standard-Firma</th>
                                     <th className="p-6 text-white font-bold uppercase tracking-wider">Arasim & Kedzierski</th>
                                 </tr>
