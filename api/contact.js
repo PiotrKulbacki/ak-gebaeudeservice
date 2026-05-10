@@ -1,6 +1,5 @@
 import nodemailer from 'nodemailer';
 import formidable from 'formidable';
-import fs from 'fs';
 
 // Konfiguracja, aby Vercel nie parsował body (zrobimy to ręcznie dla załączników)
 export const config = {
@@ -57,11 +56,11 @@ export default async function handler(req, res) {
           </p>
           <p>
             <strong>Datum:</strong>
-            new Date().toLocaleString('de-DE', {
+            ${new Date().toLocaleString('de-DE', {
               dateStyle: 'full',
               timeStyle: 'medium',
               timeZone: 'Europe/Berlin'
-            })
+            })}
           </p>
           
           <h2 style="border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; margin-top: 30px;">Nachricht</h2>

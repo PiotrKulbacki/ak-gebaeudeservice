@@ -27,7 +27,14 @@ export default function ContactForm() {
     const navigate = useNavigate();
 
     const handleChange = (e) => {
-        const { name, value, files } = e.target;
+        const { name, files } = e.target;
+        let { value } = e.target;
+
+        if (name === 'phone') {
+            value = value
+                .replace(/[^\d+\s]/g, '')
+                .replace(/(?!^)\+/g, '');
+        }
 
         if (name === 'attachments') {
             const maxSize = 15 * 1024 * 1024;
@@ -56,6 +63,11 @@ export default function ContactForm() {
             const updatedFiles = formData.attachments
                 ? [...formData.attachments, ...newFiles]
                 : newFiles;
+
+            if (updatedFiles.length > 3) {
+                alert('Maximal 3 Dateien erlaubt.');
+                return;
+            }
 
             setFormData({ ...formData, attachments: updatedFiles });
 
@@ -207,33 +219,65 @@ export default function ContactForm() {
                             </div>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                <input type="text" name="first_name" placeholder="Vorname" required value={formData.first_name} onChange={handleChange} className={inputClasses} />
-                                <input type="text" name="last_name" placeholder="Nachname" required value={formData.last_name} onChange={handleChange} className={inputClasses} />
+                                <input type="text" name="first_name" placeholder="Vorname" required value={formData.first_name} disabled={isSubmitting} onChange={handleChange} className={inputClasses} />
+                                <input type="text" name="last_name" placeholder="Nachname" required value={formData.last_name} disabled={isSubmitting} onChange={handleChange} className={inputClasses} />
                             </div>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                <input type="email" name="email" placeholder="E-Mail" required value={formData.email} onChange={handleChange} className={inputClasses} />
-                                <input type="tel" name="phone" placeholder="Telefonnummer (Optional)" value={formData.phone} onChange={handleChange} className={inputClasses} />
+                                <input type="email" name="email" placeholder="E-Mail" required value={formData.email} disabled={isSubmitting} onChange={handleChange} className={inputClasses} />
+                                <input type="tel" name="phone" placeholder="Telefonnummer (Optional)" value={formData.phone} disabled={isSubmitting} onChange={handleChange} className={inputClasses} />
                             </div>
 
-                            <textarea name="message" placeholder="Ihre Nachricht an uns..." value={formData.message} onChange={handleChange} rows={4} className={`${inputClasses} resize-none custom-scrollbar`} />
+                            <textarea name="message" placeholder="Ihre Nachricht an uns..." value={formData.message} disabled={isSubmitting} onChange={handleChange} rows={4} className={`${inputClasses} resize-none custom-scrollbar`} />
 
                             {/* Nowoczesne dodawanie plików */}
                             <div className="w-full">
                                 <label className="flex items-center justify-center gap-3 w-full border-2 border-dashed border-white/20 rounded-xl p-4 cursor-pointer hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 group">
                                     <svg className="w-6 h-6 text-gray-400 group-hover:text-cyan-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"></path></svg>
                                     <span className="text-gray-400 font-medium group-hover:text-cyan-400 transition-colors">Dateien hinzufügen (Bilder, PDFs...)</span>
-                                    <input type="file" name="attachments" multiple onChange={handleChange} className="hidden" />
+                                    <input type="file" name="attachments" multiple onChange={handleChange} disabled={isSubmitting} className="hidden" />
                                 </label>
 
                                 {/* Lista dodanych plików */}
                                 {formData.attachments && formData.attachments.length > 0 && (
                                     <ul className="mt-4 space-y-2">
                                         {formData.attachments.map((file, index) => (
-                                            <motion.li initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} key={index} className="flex items-center justify-between px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300">
-                                                <span className="truncate max-w-[80%]">{file.name}</span>
-                                                <button type="button" onClick={() => handleRemoveAttachment(index)} className="text-red-400 hover:text-red-300 hover:scale-110 transition-all p-1">
-                                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                                            <motion.li
+                                                initial={{ opacity: 0, y: -10 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                key={index}
+                                                className="flex items-center justify-between px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300"
+                                            >
+                                                <span className="truncate max-w-[80%]">
+                                                    {file.name}
+                                                </span>
+
+                                                <button
+                                                    type="button"
+                                                    disabled={isSubmitting}
+                                                    onClick={() => handleRemoveAttachment(index)}
+                                                    className={`
+                                                        text-red-400 transition-all p-1
+                                                        ${
+                                                            isSubmitting
+                                                                ? 'opacity-40 cursor-not-allowed'
+                                                                : 'hover:text-red-300 hover:scale-110'
+                                                        }
+                                                    `}
+                                                >
+                                                    <svg
+                                                        className="w-4 h-4 pointer-events-none"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        viewBox="0 0 24 24"
+                                                    >
+                                                        <path
+                                                            strokeLinecap="round"
+                                                            strokeLinejoin="round"
+                                                            strokeWidth="2"
+                                                            d="M6 18L18 6M6 6l12 12"
+                                                        />
+                                                    </svg>
                                                 </button>
                                             </motion.li>
                                         ))}
