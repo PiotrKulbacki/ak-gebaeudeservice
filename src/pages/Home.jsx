@@ -223,7 +223,7 @@ export default function Home() {
                     
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">
-                            Unsere Professionellen <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Dienstleistungen</span>
+                            Unsere Professionellen <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-500">Dienstleistungen</span>
                         </h2>
                         <p className="text-gray-400 max-w-2xl mx-auto text-lg font-light">
                             Professionell, zuverlässig und auf Ihre Bedürfnisse zugeschnitten. Wir bieten ein breites Spektrum an Services für Ihre Immobilie.
@@ -448,7 +448,7 @@ export default function Home() {
                     {/* Nowoczesny nagłówek sekcji */}
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">
-                            Unsere <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Einsatzgebiete</span>
+                            Unsere <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-500">Einsatzgebiete</span>
                         </h2>
                         <p className="text-gray-400 max-w-2xl mx-auto text-lg font-light">
                             Wir sind in einem weiten Umkreis für Sie da. Schnell, flexibel und immer vor Ort, wenn Sie uns brauchen.
@@ -508,7 +508,7 @@ export default function Home() {
                     
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">
-                            Unsere <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Versprechen</span> an Sie
+                            Unsere <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-500">Versprechen</span> an Sie
                         </h2>
                         <p className="text-gray-400 max-w-2xl mx-auto text-lg font-light">
                             Als dynamisches Unternehmen legen wir Wert auf Qualität, direkten Kontakt und höchste Kundenzufriedenheit. Ihr Objekt ist bei uns Chefsache.
@@ -621,10 +621,10 @@ export default function Home() {
                             © {new Date().getFullYear()} Arasim & Kedzierski Gebäudeservice. Alle Rechte vorbehalten.
                         </p>
                         <div className="flex gap-8">
-                            <Link to="/impressum" className="hover:text-cyan-400 transition-colors duration-300 tracking-widest uppercase text-[10px]">
+                            <Link to="/impressum" className="hover:text-green-500 transition-colors duration-300 tracking-widest uppercase text-[10px]">
                                 Impressum
                             </Link>
-                            <Link to="/datenschutz" className="hover:text-cyan-400 transition-colors duration-300 tracking-widest uppercase text-[10px]">
+                            <Link to="/datenschutz" className="hover:text-green-500 transition-colors duration-300 tracking-widest uppercase text-[10px]">
                                 Datenschutz
                             </Link>
                         </div>
