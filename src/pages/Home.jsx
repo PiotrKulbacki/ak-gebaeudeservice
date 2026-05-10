@@ -122,21 +122,21 @@ export default function Home() {
 
                 {/* Rozwijane menu mobilne w stylu Glassmorphism */}
                 <div
-                    className={`absolute top-full left-0 w-full mt-4 bg-slate-950/90 backdrop-blur-2xl border border-cyan-500/20 rounded-3xl transition-all duration-500 overflow-hidden custom-md:hidden ${
-                        isMenuOpen ? 'max-h-96 opacity-100 py-6 shadow-[0_0_30px_rgba(6,182,212,0.2)]' : 'max-h-0 opacity-0 py-0 border-transparent'}`} >
+                    className={`absolute top-full left-0 w-full mt-4 bg-slate-950/90 backdrop-blur-2xl border border-emerald-500/20 rounded-3xl transition-all duration-500 overflow-hidden custom-md:hidden ${
+                        isMenuOpen ? 'max-h-96 opacity-100 py-6 shadow-[0_0_30px_rgba(16,185,129,0.2)]' : 'max-h-0 opacity-0 py-0 border-transparent'}`} >
                     <div className="flex flex-col gap-6 px-6 text-center text-gray-300">
                         {items.map((item, index) => (
                             <a 
                                 key={index} 
                                 href={item.href} 
-                                className="hover:text-cyan-400 transition-colors tracking-widest uppercase text-sm" 
+                                className="hover:text-emerald-400 transition-colors tracking-widest uppercase text-sm" 
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 {item.label}
                             </a>
                         ))}
                         <div
-                            className="flex justify-center items-center cursor-pointer mt-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold tracking-widest uppercase text-sm shadow-[0_0_20px_rgba(6,182,212,0.4)]"
+                            className="flex justify-center items-center cursor-pointer mt-2 px-6 py-3 rounded-full bg-gradient-to-r from-emerald-500 to-green-600 text-white font-bold tracking-widest uppercase text-sm shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:scale-105 transition-all duration-300"
                             onClick={() => {
                                 setIsMenuOpen(false);
                                 navigate('/contact');
