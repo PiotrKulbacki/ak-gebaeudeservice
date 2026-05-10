@@ -392,6 +392,114 @@ export default function Home() {
                                         </ul>
                                     </>
                                 )
+                            },
+                            {
+                                title: "Maler- & Spachtelarbeiten",
+                                desc: "Frische Farben und glatte Wände für ein neues Wohngefühl oder den Mieterwechsel.",
+                                img: "/Kafelki/Maler.png",
+                                details: (
+                                    <>
+                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Professionelle Wandgestaltung:</h4>
+                                        <p className="text-gray-300 mb-4 font-light leading-relaxed">
+                                            Ob Ausbesserungen nach einem Umzug oder ein komplett neuer Anstrich – wir sorgen für saubere Kanten i perfekte Oberflächen.
+                                        </p>
+                                        <ul className="space-y-3 mb-8 text-gray-300 font-light">
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">🖌️</span> 
+                                                <span><strong>Innenanstrich:</strong> Sauberer Anstrich von Wänden und Decken mit hochwertigen Farben.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">🧱</span> 
+                                                <span><strong>Spachteln & Glätten:</strong> Verspachteln von Löchern, Rissen und Unebenheiten für eine makellose Optik.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">🛡️</span> 
+                                                <span><strong>Abdeckservice:</strong> Wir schützen Ihre Böden und Möbel sorgfältig vor Farbspritzern.</span>
+                                            </li>
+                                        </ul>
+                                    </>
+                                )
+                            },
+                            {
+                                title: "Kleinreparaturen",
+                                desc: "Schnelle Hilfe bei defekten Türklinken, klemmenden Fenstern oder losen Scharnieren.",
+                                img: "/Kafelki/Kleinreparaturen.png",
+                                details: (
+                                    <>
+                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Werterhalt Ihrer Immobilie:</h4>
+                                        <p className="text-gray-300 mb-4 font-light leading-relaxed">
+                                            Oft sind es die kleinen Dinge, die im Alltag stören. Wir erledigen kleine Instandsetzungen schnell und unkompliziert, bevor daraus größere Schäden entstehen.
+                                        </p>
+                                        <ul className="space-y-3 mb-8 text-gray-300 font-light">
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">🚪</span> 
+                                                <span><strong>Türen & Fenster:</strong> Einstellen von Scharnieren, Austausch von Klinken oder Dichtungen.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">🔌</span> 
+                                                <span><strong>Hardware-Check:</strong> Festschrauben von lockeren Steckdosenabdeckungen oder Leisten.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">✅</span> 
+                                                <span><strong>Hausmeister-Service:</strong> Allgemeine technische Überprüfung und Behebung kleinerer Mängel.</span>
+                                            </li>
+                                        </ul>
+                                    </>
+                                )
+                            },
+                            {
+                                title: "Montageservice",
+                                desc: "Fachgerechte Montage von Regalen, Lampen, Gardinenstangen und Kleinmöbeln.",
+                                img: "/Kafelki/Montageservice.png",
+                                details: (
+                                    <>
+                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Wir bringen es an die Wand:</h4>
+                                        <p className="text-gray-300 mb-4 font-light leading-relaxed">
+                                            Sie haben neu eingekauft oder sind gerade umgezogen? Wir unterstützen Sie beim Aufbau und der sicheren Befestigung Ihrer Einrichtung.
+                                        </p>
+                                        <ul className="space-y-3 mb-8 text-gray-300 font-light">
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">🖼️</span> 
+                                                <span><strong>Wandmontage:</strong> Sicheres Aufhängen von Bildern, Spiegeln, Regalen und TV-Halterungen.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">💡</span> 
+                                                <span><strong>Lampen & Leuchten:</strong> Installation und Austausch von Decken- und Wandleuchten.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">📦</span> 
+                                                <span><strong>Möbelaufbau:</strong> Montage von Regalsystemen, Schränken und anderen Einrichtungsgegenständen.</span>
+                                            </li>
+                                        </ul>
+                                    </>
+                                )
+                            },
+                            {
+                                title: "Silikon- & Fugenarbeiten",
+                                desc: "Erneuerung von alten Fugen in Bad und Küche für eine hygienische und frische Optik.",
+                                img: "/Kafelki/Silikon.png",
+                                details: (
+                                    <>
+                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Schutz vor Feuchtigkeit:</h4>
+                                        <p className="text-gray-300 mb-4 font-light leading-relaxed">
+                                            Alte, rissige oder schimmelige Fugen sehen nicht nur unschön aus, sondern können zu Wasserschäden führen. Wir erneuern sie professionell.
+                                        </p>
+                                        <ul className="space-y-3 mb-8 text-gray-300 font-light">
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">🚿</span> 
+                                                <span><strong>Sanitärfugen:</strong> Erneuerung von Silikonfugen an Duschen, Badewannen i Waschbecken.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">🍳</span> 
+                                                <span><strong>Küchenbereich:</strong> Abdichten von Arbeitsplatten i Fliesenspiegeln.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">🧽</span> 
+                                                <span><strong>Schimmelschutz:</strong> Entfernung alter Fugenmassen und fachgerechte Neuabdichtung.</span>
+                                            </li>
+                                        </ul>
+                                    </>
+                                )
                             }
                         ].map((service, index) => {
                             const isEven = index % 2 === 0;

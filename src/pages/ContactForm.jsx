@@ -140,19 +140,17 @@ export default function ContactForm() {
         }
     };
 
-    // ZMIANA: focus:border-emerald-500 i focus:ring-emerald-500
     const inputClasses = "w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all duration-300";
 
     return (
         <div className="relative min-h-screen bg-slate-950 selection:bg-emerald-500/30 font-sans flex items-center justify-center overflow-hidden py-20 px-4 sm:px-6">
             
-            {/* Tło - Świetlne akcenty - ZMIANA na emerald */}
+            {/* Tło - Świetlne akcenty */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none"></div>
 
             {/* Powrót na stronę główną (Glassmorphism Navbar Style) */}
             <header className="absolute top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50">
                 <div className="bg-slate-950/60 backdrop-blur-2xl border border-white/10 rounded-full px-6 py-3 flex justify-between items-center shadow-[0_0_30px_rgba(0,0,0,0.5)]">
-                    {/* ZMIANA hover:text-emerald-400 */}
                     <Link to="/" className="flex items-center gap-2 text-gray-300 hover:text-emerald-400 transition-colors group">
                         <svg className="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
                         <span className="text-sm font-bold tracking-widest uppercase">Startseite</span>
@@ -170,7 +168,6 @@ export default function ContactForm() {
                     >
                         <div>
                             <h1 className="text-4xl sm:text-6xl font-bold text-white mb-4 tracking-tight">
-                                {/* ZMIANA from-emerald-400 to-green-500 */}
                                 Lassen Sie uns <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-500">sprechen.</span>
                             </h1>
                             <p className="text-gray-400 text-lg font-light leading-relaxed max-w-md">
@@ -207,7 +204,6 @@ export default function ContactForm() {
                         initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
                         className="bg-slate-900/60 backdrop-blur-xl border border-white/10 rounded-[2rem] p-8 sm:p-10 shadow-[0_0_40px_rgba(0,0,0,0.5)] relative overflow-hidden"
                     >
-                        {/* ZMIANA: bg-emerald-500/5 */}
                         <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/5 blur-[80px] rounded-full pointer-events-none"></div>
 
                         <form onSubmit={handleSubmit} className="relative z-10 flex flex-col space-y-5">
@@ -229,6 +225,10 @@ export default function ContactForm() {
                                     <option value="Winterdienst" className="bg-slate-900 text-white">Winterdienst</option>
                                     <option value="Entrümpelung & Umzug" className="bg-slate-900 text-white">Entrümpelung & Umzug</option>
                                     <option value="Fensterreinigung innen & außen" className="bg-slate-900 text-white">Fensterreinigung innen & außen</option>
+                                    <option value="Maler- & Spachtelarbeiten" className="bg-slate-900 text-white">Maler- & Spachtelarbeiten</option>
+                                    <option value="Kleinreparaturen" className="bg-slate-900 text-white">Kleinreparaturen</option>
+                                    <option value="Montageservice" className="bg-slate-900 text-white">Montageservice</option>
+                                    <option value="Silikon- & Fugenarbeiten" className="bg-slate-900 text-white">Silikon- & Fugenarbeiten</option>
                                     <option value="Andere" className="bg-slate-900 text-white">Andere</option>
                                 </select>
                             </div>
@@ -254,7 +254,6 @@ export default function ContactForm() {
                                 ${
                                     isSubmitting
                                     ? 'opacity-50 cursor-not-allowed border-white/10'
-                                    // ZMIANY: hover:border-emerald-500/50 hover:bg-emerald-500/5
                                     : 'cursor-pointer border-white/20 hover:border-emerald-500/50 hover:bg-emerald-500/5'
                                 }
                                 `}>
@@ -353,10 +352,8 @@ export default function ContactForm() {
                     >
                         <motion.div
                             initial={{ scale: 0.9, opacity: 0, y: 20 }} animate={{ scale: 1, opacity: 1, y: 0 }} exit={{ scale: 0.9, opacity: 0, y: 20 }}
-                            // ZMIANA: border-emerald-500/30, shadow rgba
                             className="bg-slate-900 border border-emerald-500/30 rounded-3xl p-8 max-w-md w-full text-center shadow-[0_0_50px_rgba(16,185,129,0.15)]"
                         >
-                            {/* ZMIANA: bg-emerald-500/10, text-emerald-400 */}
                             <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-emerald-500/10 flex items-center justify-center">
                                 <svg className="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                             </div>
@@ -364,7 +361,6 @@ export default function ContactForm() {
                             <p className="text-gray-400 mb-8">{modalMessage}</p>
                             <button 
                                 onClick={() => { setShowModal(false); navigate('/'); }}
-                                // ZMIANA: border-emerald-500/50, text-emerald-400, hover:bg-emerald-500
                                 className="w-full py-3 rounded-full bg-slate-800 border border-emerald-500/50 text-emerald-400 font-bold uppercase tracking-widest hover:bg-emerald-500 hover:text-slate-950 transition-colors duration-300"
                             >
                                 Zurück zur Startseite
