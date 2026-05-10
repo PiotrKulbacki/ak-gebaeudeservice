@@ -579,7 +579,7 @@ export default function Home() {
                         </p>
                     </div>
 
-                    {/* 4 Filary Wartości (Zamiast regionów) */}
+                    {/* 4 Filary Wartości */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
                         {[
                             {
@@ -598,7 +598,6 @@ export default function Home() {
                                 desc: "Keine Warteschleifen, keine wechselnden Subunternehmer. Sie kommunizieren direkt mit den Inhabern. Schnelle Entscheidungen und 100%ige Verlässlichkeit sind garantiert."
                             },
                             {
-                                icon: "شفاف", // Jeśli emoji nie pasuje, można wstawić SVG, tu symbolicznie: "🔍"
                                 icon: "🔍",
                                 title: "Absolute Transparenz",
                                 desc: "Sie wissen immer, wofür Sie bezahlen. Keine versteckten Kosten. Auf Wunsch dokumentieren wir unsere Arbeit digital, sodass Sie auch aus der Ferne immer im Bilde sind."
