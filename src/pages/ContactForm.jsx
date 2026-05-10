@@ -17,7 +17,7 @@ export default function ContactForm() {
         email: '',
         phone: '',
         message: '',
-        attachments: null
+        attachments: []
     });
 
     const [showModal, setShowModal] = useState(false);
@@ -37,7 +37,7 @@ export default function ContactForm() {
         }
 
         if (name === 'attachments') {
-            const maxSize = 15 * 1024 * 1024;
+            const maxSize = 10 * 1024 * 1024;
             const allowedTypes = [
                 'image/png',
                 'image/jpeg',
@@ -54,18 +54,29 @@ export default function ContactForm() {
                     return false;
                 }
                 if (file.size > maxSize) {
-                    alert(`Die Datei "${file.name}" überschreitet das Limit von 15MB.`);
+                    alert(`Die Datei "${file.name}" überschreitet das Limit von 10MB.`);
                     return false;
                 }
                 return true;
             });
 
-            const updatedFiles = formData.attachments
-                ? [...formData.attachments, ...newFiles]
-                : newFiles;
+            const updatedFiles = [
+                ...formData.attachments,
+                ...newFiles
+            ];
 
-            if (updatedFiles.length > 3) {
-                alert('Maximal 3 Dateien erlaubt.');
+            const totalSize = updatedFiles.reduce(
+                (sum, file) => sum + file.size,
+                0
+            );
+            
+            if (totalSize > 20 * 1024 * 1024) {
+                alert('Die Gesamtgröße aller Dateien darf 20MB nicht überschreiten.');
+                return;
+            }
+
+            if (updatedFiles.length > 5) {
+                alert('Maximal 5 Dateien erlaubt.');
                 return;
             }
 
@@ -79,6 +90,7 @@ export default function ContactForm() {
     };
 
     const handleRemoveAttachment = (indexToRemove) => {
+        if (isSubmitting) return;
         const updatedFiles = formData.attachments.filter((_, index) => index !== indexToRemove);
         setFormData({ ...formData, attachments: updatedFiles });
     };
@@ -199,12 +211,12 @@ export default function ContactForm() {
                             {error && <div className="bg-red-500/10 border border-red-500/50 text-red-400 p-4 rounded-xl text-sm">{error}</div>}
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                <select name="is_company" value={formData.is_company ? 'Gewerblich' : 'Privatperson'} onChange={handleChange} className={`${inputClasses} appearance-none cursor-pointer`}>
+                                <select disabled={isSubmitting} name="is_company" value={formData.is_company ? 'Gewerblich' : 'Privatperson'} onChange={handleChange} className={`${inputClasses} appearance-none cursor-pointer`}>
                                     <option value="Gewerblich" className="bg-slate-900 text-white">Gewerblich</option>
                                     <option value="Privatperson" className="bg-slate-900 text-white">Privatperson</option>
                                 </select>
 
-                                <select name="service_type" value={formData.service_type} onChange={handleChange} className={`${inputClasses} appearance-none cursor-pointer`}>
+                                <select name="service_type" value={formData.service_type} disabled={isSubmitting} onChange={handleChange} className={`${inputClasses} appearance-none cursor-pointer`}>
                                     <option value="" className="bg-slate-900 text-gray-400">-- Dienstleistung --</option>
                                     <option value="Hausmeisterservice" className="bg-slate-900 text-white">Hausmeisterservice</option>
                                     <option value="Büroreinigung" className="bg-slate-900 text-white">Büroreinigung</option>
@@ -232,7 +244,16 @@ export default function ContactForm() {
 
                             {/* Nowoczesne dodawanie plików */}
                             <div className="w-full">
-                                <label className="flex items-center justify-center gap-3 w-full border-2 border-dashed border-white/20 rounded-xl p-4 cursor-pointer hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 group">
+                                <label className={`
+                                flex items-center justify-center gap-3
+                                w-full border-2 border-dashed rounded-xl p-4
+                                transition-all duration-300 group
+                                ${
+                                    isSubmitting
+                                    ? 'opacity-50 cursor-not-allowed border-white/10'
+                                    : 'cursor-pointer border-white/20 hover:border-cyan-500/50 hover:bg-cyan-500/5'
+                                }
+                                `}>
                                     <svg className="w-6 h-6 text-gray-400 group-hover:text-cyan-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"></path></svg>
                                     <span className="text-gray-400 font-medium group-hover:text-cyan-400 transition-colors">Dateien hinzufügen (Bilder, PDFs...)</span>
                                     <input type="file" name="attachments" multiple onChange={handleChange} disabled={isSubmitting} className="hidden" />

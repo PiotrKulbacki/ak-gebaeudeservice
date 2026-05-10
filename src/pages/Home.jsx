@@ -67,8 +67,10 @@ export default function Home() {
                     {/* Futurystyczne Menu (Desktop) */}
                     <nav className="hidden custom-md:flex items-center gap-12 ml-8">
                         {items.map((item, index) => {
-                            const linkClasses = "relative text-gray-300 text-base font-medium tracking-widest uppercase hover:text-cyan-400 transition-colors duration-300 group";
-                            const hoverLine = <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-cyan-400 transition-all duration-300 group-hover:w-full shadow-[0_0_8px_rgba(6,182,212,0.8)]"></span>;
+                            // ZMIANA: hover:text-emerald-400 zamiast cyan
+                            const linkClasses = "relative text-gray-300 text-base font-medium tracking-widest uppercase hover:text-emerald-400 transition-colors duration-300 group";
+                            // ZMIANA: bg-emerald-400 oraz shadow dopasowany do zieleni (rgba: 16,185,129)
+                            const hoverLine = <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-emerald-400 transition-all duration-300 group-hover:w-full shadow-[0_0_8px_rgba(16,185,129,0.8)]"></span>;
 
                             if (item.href.startsWith('#')) {
                                 return (
@@ -90,8 +92,10 @@ export default function Home() {
 
                     {/* Cyber-przycisk Kontakt */}
                     <div className="hidden custom-md:block">
-                        <Link to='/contact' className="relative inline-flex items-center justify-center px-10 py-3 overflow-hidden font-bold text-white bg-slate-900 border border-cyan-500/50 rounded-full hover:bg-slate-800 group shadow-[0_0_15px_rgba(6,182,212,0.2)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] transition-all duration-300">
-                            <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-cyan-500 rounded-full group-hover:w-60 group-hover:h-60"></span>
+                        {/* ZMIANA: border-emerald-500/50 oraz cienie (shadow) w kolorze emerald */}
+                        <Link to='/contact' className="relative inline-flex items-center justify-center px-10 py-3 overflow-hidden font-bold text-white bg-slate-900 border border-emerald-500/50 rounded-full hover:bg-slate-800 group shadow-[0_0_15px_rgba(16,185,129,0.2)] hover:shadow-[0_0_30px_rgba(16,185,129,0.6)] transition-all duration-300">
+                            {/* ZMIANA: Tło wypełniające przycisk po najechaniu na bg-emerald-500 */}
+                            <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-emerald-500 rounded-full group-hover:w-60 group-hover:h-60"></span>
                             <span className="relative flex items-center gap-2 text-base uppercase tracking-wider group-hover:text-slate-900">
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                                 Kontakt
@@ -102,15 +106,15 @@ export default function Home() {
                     {/* Hamburger dla urządzeń mobilnych (Neonowy design) */}
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        className="relative flex flex-col justify-center items-center w-10 h-10 border border-cyan-500/30 rounded-full bg-cyan-500/10 hover:bg-cyan-500/20 transition-all duration-300 custom-md:hidden z-50 group"
+                        className="relative flex flex-col justify-center items-center w-10 h-10 border border-emerald-500/30 rounded-full bg-emerald-500/10 hover:bg-emerald-500/20 transition-all duration-300 custom-md:hidden z-50 group"
                     >
                         {isMenuOpen ? (
-                            <span className="text-cyan-400 text-xl">✕</span>
+                            <span className="text-emerald-400 text-xl">✕</span>
                         ) : (
                             <>
-                                <span className="w-4 h-[2px] bg-cyan-400 mb-1 group-hover:w-5 transition-all"></span>
-                                <span className="w-5 h-[2px] bg-cyan-400 mb-1"></span>
-                                <span className="w-3 h-[2px] bg-cyan-400 group-hover:w-5 transition-all"></span>
+                                <span className="w-4 h-[2px] bg-emerald-400 mb-1 group-hover:w-5 transition-all"></span>
+                                <span className="w-5 h-[2px] bg-emerald-400 mb-1"></span>
+                                <span className="w-3 h-[2px] bg-emerald-400 group-hover:w-5 transition-all"></span>
                             </>
                         )}
                     </button>
@@ -172,7 +176,7 @@ export default function Home() {
                     {/* NAGŁÓWEK - Na telefonach wyświetli się jako pierwszy (order-1), na komputerach jako drugi (md:order-2) */}
                     <h1 className="order-1 md:order-2 text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-5 md:mb-6 tracking-tight leading-tight drop-shadow-2xl">
                         Die Komplettlösung für Ihre <br className="hidden sm:block" />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Immobilienpflege</span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-500">Immobilienpflege</span>
                     </h1>
 
                     {/* ODZNAKA Z OPINIAMI - Na telefonach wyświetli się jako druga (order-2), na komputerach na samej górze (md:order-1) */}
@@ -202,7 +206,7 @@ export default function Home() {
 
                     {/* Przyciski Akcji - Zawsze na czwartym miejscu (order-4) */}
                     <div className="order-4 flex flex-col sm:flex-row gap-5 w-full sm:w-auto">
-                        <Link to="/contact" className="px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-base uppercase tracking-widest hover:scale-105 shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all duration-300">
+                        <Link to="/contact" className="px-8 py-4 rounded-full bg-gradient-to-r from-emerald-500 to-green-600 text-white font-bold text-base uppercase tracking-widest hover:scale-105 shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all duration-300">
                             Kostenloses Angebot
                         </Link>
                         <a href="#leistungen" className="px-8 py-4 rounded-full bg-slate-900/40 text-white font-bold text-base uppercase tracking-widest border border-white/20 hover:bg-slate-900/70 hover:border-white/50 hover:shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:scale-105 transition-all duration-300 backdrop-blur-md">
@@ -237,12 +241,12 @@ export default function Home() {
                                         <p className="mb-4 text-gray-300 leading-relaxed">
                                             Ein reibungsloser Ablauf im Hintergrund ist das Fundament jeder rentablen Immobilie. Als Ihr proaktiver Service vor Ort sind wir das Bindeglied zwischen Eigentümer, Verwaltung und Mietern. Wir erkennen Instandhaltungsbedarfe, bevor sie zu teuren Notfällen werden, beheben kleine Mängel sofort selbst und entlasten Sie spürbar vom zeitaufwendigen Tagesgeschäft.
                                         </p>
-                                        <h4 className="text-cyan-400 font-semibold mb-3 text-lg">So entlasten wir Ihre Verwaltung:</h4>
+                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">So entlasten wir Ihre Verwaltung:</h4>
                                         <ul className="space-y-3 mb-6 text-gray-300">
-                                            <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">🔧</span> <span><strong>Anlagenkontrolle & Dokumentation:</strong> Regelmäßige Inspektion von Haus- und Betriebstechnik (Heizung, Beleuchtung) inklusive Zählerstandserfassungen für Ihre Abrechnungen.</span></li>
-                                            <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">🛡️</span> <span><strong>Sicherheit & Brandschutz:</strong> Gewissenhafte Freihaltung von Fluchtwegen und Kontrolle der Brandschutzeinrichtungen zum Schutz vor rechtlichen Haftungsrisiken.</span></li>
-                                            <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">🛠️</span> <span><strong>Effiziente Kleinreparaturen:</strong> Tropfende Hähne, klemmende Türen oder defekte Leuchtmittel beheben wir sofort – das erspart Ihnen die teure und langwierige Beauftragung von Fremdfirmen.</span></li>
-                                            <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">🤝</span> <span><strong>Mieterbetreuung als Puffer:</strong> Wir sind der erste Ansprechpartner vor Ort. Wir lösen Routineprobleme direkt und leiten nur das an Sie weiter, was wirklich Ihren Schreibtisch erreichen muss.</span></li>
+                                            <li className="flex items-start"><span className="text-emerald-500 mr-3 text-xl">🔧</span> <span><strong>Anlagenkontrolle & Dokumentation:</strong> Regelmäßige Inspektion von Haus- und Betriebstechnik (Heizung, Beleuchtung) inklusive Zählerstandserfassungen für Ihre Abrechnungen.</span></li>
+                                            <li className="flex items-start"><span className="text-emerald-500 mr-3 text-xl">🛡️</span> <span><strong>Sicherheit & Brandschutz:</strong> Gewissenhafte Freihaltung von Fluchtwegen und Kontrolle der Brandschutzeinrichtungen zum Schutz vor rechtlichen Haftungsrisiken.</span></li>
+                                            <li className="flex items-start"><span className="text-emerald-500 mr-3 text-xl">🛠️</span> <span><strong>Effiziente Kleinreparaturen:</strong> Tropfende Hähne, klemmende Türen oder defekte Leuchtmittel beheben wir sofort – das erspart Ihnen die teure und langwierige Beauftragung von Fremdfirmen.</span></li>
+                                            <li className="flex items-start"><span className="text-emerald-500 mr-3 text-xl">🤝</span> <span><strong>Mieterbetreuung als Puffer:</strong> Wir sind der erste Ansprechpartner vor Ort. Wir lösen Routineprobleme direkt und leiten nur das an Sie weiter, was wirklich Ihren Schreibtisch erreichen muss.</span></li>
                                         </ul>
                                     </>
                                 )
@@ -398,7 +402,7 @@ export default function Home() {
                                             setSelectedService(service);
                                         }
                                     }}
-                                    className="group relative flex flex-col h-full rounded-2xl overflow-hidden bg-slate-900/40 border border-white/10 hover:border-cyan-500/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] hover:-translate-y-2 transition-colors duration-500 backdrop-blur-md cursor-pointer"
+                                    className="group relative flex flex-col h-full rounded-2xl overflow-hidden bg-slate-900/40 border border-white/10 hover:border-emerald-500/50 hover:shadow-[0_0_30px_rgba(16,185,129,0.15)] hover:-translate-y-2 transition-colors duration-500 backdrop-blur-md cursor-pointer"
                                 >
                                     <div className="relative h-48 w-full overflow-hidden">
                                         <img
@@ -410,15 +414,15 @@ export default function Home() {
                                     </div>
 
                                     <div className="p-6 flex flex-col flex-grow relative">
-                                        <div className="absolute top-0 left-6 w-10 h-[2px] bg-cyan-500 group-hover:w-16 transition-all duration-300"></div>
-                                        <h3 className="text-xl font-bold text-white mb-3 mt-2 tracking-wide group-hover:text-cyan-400 transition-colors duration-300">
+                                        <div className="absolute top-0 left-6 w-10 h-[2px] bg-emerald-500 group-hover:w-16 transition-all duration-300"></div>
+                                        <h3 className="text-xl font-bold text-white mb-3 mt-2 tracking-wide group-hover:text-emerald-400 transition-colors duration-300">
                                             {service.title}
                                         </h3>
                                         <p className="text-sm text-gray-400 leading-relaxed flex-grow">
                                             {service.desc}
                                         </p>
 
-                                        <div className="mt-4 flex items-center text-cyan-400 text-sm font-semibold opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                                        <div className="mt-4 flex items-center text-emerald-400 text-sm font-semibold opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                                             <span>Mehr erfahren</span>
                                             <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                                         </div>
@@ -513,7 +517,6 @@ export default function Home() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
                         {[
-                            // Pierwsza karta dostała parametry 'isNumber', 'value' i 'suffix'
                             { isNumber: true, value: 100, suffix: "%", label: "Engagement", desc: "Wir behandeln Ihr Objekt wie unser eigenes", icon: "🤝" },
                             { highlight: "Direkt", label: "Ein Ansprechpartner", desc: "Persönliche Betreuung ohne Warteschleifen", icon: "👤" },
                             { highlight: "Modern", label: "Beste Ausrüstung", desc: "Effiziente und umweltschonende Technik", icon: "🛠️" },
@@ -525,22 +528,21 @@ export default function Home() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: false, amount: 0.2 }}
                                 transition={{ duration: 0.6, delay: idx * 0.15, ease: "easeOut" }}
-                                className="bg-slate-900/50 backdrop-blur-md border border-white/10 rounded-3xl p-8 text-center hover:border-cyan-500/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] transition-all duration-300 group relative overflow-hidden"
+                                className="bg-slate-900/50 backdrop-blur-md border border-white/10 rounded-3xl p-8 text-center hover:border-emerald-500/50 hover:shadow-[0_0_30px_rgba(16,185,129,0.15)] transition-all duration-300 group relative overflow-hidden"
                             >
-                                <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/0 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/0 to-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                 
                                 <div className="text-4xl mb-4 grayscale group-hover:grayscale-0 transition-all duration-300">{stat.icon}</div>
                                 
                                 <div className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-white to-gray-400 mb-2 drop-shadow-md min-h-[60px] flex items-center justify-center">
-                                    {/* Inteligentny warunek: Jeśli karta ma 'isNumber', renderuj licznik. Jeśli nie, renderuj zwykły tekst. */}
                                     {stat.isNumber ? (
                                         <AnimatedNumber from={0} to={stat.value} suffix={stat.suffix} />
                                     ) : (
                                         stat.highlight
                                     )}
                                 </div>
-                                
-                                <h4 className="text-lg font-bold text-cyan-400 mb-1">{stat.label}</h4>
+
+                                <h4 className="text-lg font-bold text-emerald-400 mb-1">{stat.label}</h4>
                                 <p className="text-sm text-gray-400 font-light">{stat.desc}</p>
                             </motion.div>
                         ))}
@@ -554,16 +556,17 @@ export default function Home() {
                         <motion.div
                             animate={{ 
                                 scale: [1, 1.03, 1],
+                                // ZMIANA: zielone wartości rgba w animacji pulsowania
                                 boxShadow: [
-                                    "0px 0px 20px rgba(6, 182, 212, 0.2)",
-                                    "0px 0px 40px rgba(6, 182, 212, 0.6)",
-                                    "0px 0px 20px rgba(6, 182, 212, 0.2)"
+                                    "0px 0px 20px rgba(16, 185, 129, 0.2)",
+                                    "0px 0px 40px rgba(16, 185, 129, 0.6)",
+                                    "0px 0px 20px rgba(16, 185, 129, 0.2)"
                                 ]
                             }}
                             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                             className="rounded-full"
                         >
-                            <Link to="/contact" className="inline-block px-12 py-5 rounded-full bg-slate-900 border border-cyan-500 text-cyan-400 font-bold tracking-widest uppercase hover:bg-cyan-500 hover:text-slate-900 transition-colors duration-300">
+                            <Link to="/contact" className="inline-block px-12 py-5 rounded-full bg-slate-900 border border-emerald-500 text-emerald-400 font-bold tracking-widest uppercase hover:bg-emerald-500 hover:text-slate-900 transition-colors duration-300">
                                 Angebot Anfordern
                             </Link>
                         </motion.div>
@@ -573,7 +576,6 @@ export default function Home() {
             </section>
 
             <footer className="relative bg-slate-950 border-t border-white/5 pt-12 pb-8 overflow-hidden z-20">
-                {/* Delikatna poświata u góry stopki */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent"></div>
 
                 <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
@@ -589,22 +591,25 @@ export default function Home() {
 
                     {/* Główne Dane Kontaktowe */}
                     <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12 mb-12 text-gray-300">
-                        
+    
                         {/* Telefon */}
-                        <a href="tel:+491621940328" className="flex items-center group hover:text-cyan-400 transition-colors duration-300">
-                            <div className="p-2.5 rounded-full bg-white/5 border border-white/10 mr-3 group-hover:bg-cyan-500/20 group-hover:border-cyan-500/50 transition-all duration-300">
-                                <svg className="w-5 h-5 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        <a href="tel:+491621940328" className="flex items-center group hover:text-emerald-400 transition-colors duration-300">
+                            <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 mr-3 group-hover:bg-emerald-500 group-hover:border-emerald-500 group-hover:text-slate-900 transition-all duration-300">
+                                <svg className="w-5 h-5 text-emerald-500 group-hover:text-slate-900 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
                             </div>
                             <span className="text-lg tracking-wide font-light">+49 162 1940328</span>
                         </a>
 
-                        {/* Kropka oddzielająca (tylko desktop) */}
-                        <div className="hidden md:block w-1 h-1 rounded-full bg-cyan-500/50"></div>
+                        <div className="hidden md:block w-1 h-1 rounded-full bg-emerald-500/50"></div>
 
                         {/* Email */}
-                        <a href="mailto:info@akgebaeudeservice.com" className="flex items-center group hover:text-cyan-400 transition-colors duration-300">
-                            <div className="p-2.5 rounded-full bg-white/5 border border-white/10 mr-3 group-hover:bg-cyan-500/20 group-hover:border-cyan-500/50 transition-all duration-300">
-                                <svg className="w-5 h-5 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <a href="mailto:info@akgebaeudeservice.com" className="flex items-center group hover:text-emerald-400 transition-colors duration-300">
+                            <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 mr-3 group-hover:bg-emerald-500 group-hover:border-emerald-500 group-hover:text-slate-900 transition-all duration-300">
+                                <svg className="w-5 h-5 text-emerald-500 group-hover:text-slate-900 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
                             </div>
                             <span className="text-lg tracking-wide font-light">info@akgebaeudeservice.com</span>
                         </a>
@@ -654,7 +659,7 @@ export default function Home() {
                                 {/* Przycisk zamykania (Krzyżyk) */}
                                 <button 
                                     onClick={() => setSelectedService(null)}
-                                    className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-slate-950/50 text-white border border-white/20 hover:bg-cyan-500 hover:text-slate-900 hover:border-cyan-500 transition-all duration-300 backdrop-blur-md z-10"
+                                    className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-slate-950/50 text-white border border-white/20 hover:bg-emerald-500 hover:text-slate-900 hover:border-emerald-500 transition-all duration-300 backdrop-blur-md z-10"
                                 >
                                     ✕
                                 </button>
@@ -679,7 +684,7 @@ export default function Home() {
                                             setSelectedService(null);
                                             navigate('/contact', { state: {preselectedService: serviceName} });
                                         }}
-                                        className="px-8 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold tracking-widest uppercase text-sm hover:scale-105 shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all duration-300"
+                                        className="px-8 py-3 rounded-full bg-gradient-to-r from-emerald-500 to-green-600 text-white font-bold tracking-widest uppercase text-sm hover:scale-105 shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all duration-300"
                                     >
                                         Angebot anfordern
                                     </button>

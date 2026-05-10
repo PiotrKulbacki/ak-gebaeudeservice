@@ -36,8 +36,7 @@ export default function ScrollToTop() {
                   exit={{ opacity: 0, y: 20, scale: 0.8 }}
                   transition={{ duration: 0.3 }}
                   onClick={scrollToTop}
-                  // Zastosowany Glassmorphism, dopasowane marginesy i wysoki z-index
-                  className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100] p-3 md:p-4 rounded-full bg-slate-900/60 backdrop-blur-md border border-cyan-500/40 text-cyan-400 shadow-[0_0_15px_rgba(6,182,212,0.15)] hover:bg-cyan-500 hover:text-slate-950 hover:border-cyan-500 hover:shadow-[0_0_25px_rgba(6,182,212,0.6)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
+                  className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100] p-3 md:p-4 rounded-full bg-slate-900/60 backdrop-blur-md border border-emerald-500/40 text-emerald-400 shadow-[0_0_15px_rgba(16,185,129,0.15)] hover:bg-emerald-500 hover:text-slate-950 hover:border-emerald-500 hover:shadow-[0_0_25px_rgba(16,185,129,0.6)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
                   aria-label="Nach oben scrollen"
               >
                   {/* Ikona strzałki, która dodatkowo podskakuje przy najechaniu myszką */}
