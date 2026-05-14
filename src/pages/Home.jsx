@@ -179,24 +179,6 @@ export default function Home() {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-500">Immobilienpflege</span>
                     </h1>
 
-                    {/* ODZNAKA Z OPINIAMI - Na telefonach wyświetli się jako druga (order-2), na komputerach na samej górze (md:order-1) */}
-                    <a 
-                        href="https://www.google.com/maps/place/https://www.google.com/maps/place/PSP+Hausmeisterservice+Arasim+%26+Kedzierski/@0,0,10z/data=!4m6!3m5!1s0xab2c3fdc2c364fdd:0x7c849dba496dd5f!8m2!3d52.4929698!4d13.4247318!16s%2Fg%2F11xh25shxv?hl=pl&entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        // Zmniejszono odstępy wewnętrzne (px, py) na telefonach
-                        className="order-2 md:order-1 flex items-center gap-2 md:gap-3 mb-8 px-3.5 py-1.5 md:px-5 md:py-2.5 rounded-full bg-slate-900/60 border border-white/20 backdrop-blur-md hover:bg-slate-900/80 transition-colors duration-300 shadow-lg"
-                    >
-                        <div className="flex text-yellow-400">
-                            {[...Array(5)].map((_, i) => (
-                                // Zmniejszono gwiazdki z w-4 na w-3.5 tylko dla telefonów
-                                <svg key={i} className="w-3.5 h-3.5 md:w-4 md:h-4 fill-current drop-shadow-[0_0_5px_rgba(250,204,21,0.5)]" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.954L10 0l2.951 5.956 6.561.954-4.756 4.635 1.122 6.545z"/></svg>
-                            ))}
-                        </div>
-                        {/* Zmniejszono czcionkę na text-xs na telefonach */}
-                        <span className="text-gray-100 text-xs md:text-sm font-medium tracking-wide">Von Kunden mit 5.0 bewertet</span>
-                    </a>
-
                     {/* SZKLANY KONTENER NA TEKST - Zawsze na trzecim miejscu (order-3) */}
                     <div className="order-3 bg-slate-950/50 backdrop-blur-lg border border-white/10 rounded-2xl p-5 md:p-6 mb-10 max-w-2xl shadow-2xl">
                         <p className="text-gray-100 text-lg md:text-xl leading-relaxed font-light">
@@ -238,15 +220,27 @@ export default function Home() {
                                 img: "/Kafelki/Hausmeisterservice.png", 
                                 details: (
                                     <>
-                                        <p className="mb-4 text-gray-300 leading-relaxed">
+                                        <p className="mb-4 text-gray-300 leading-relaxed font-light">
                                             Ein reibungsloser Ablauf im Hintergrund ist das Fundament jeder rentablen Immobilie. Als Ihr proaktiver Service vor Ort sind wir das Bindeglied zwischen Eigentümer, Verwaltung und Mietern. Wir erkennen Instandhaltungsbedarfe, bevor sie zu teuren Notfällen werden, beheben kleine Mängel sofort selbst und entlasten Sie spürbar vom zeitaufwendigen Tagesgeschäft.
                                         </p>
                                         <h4 className="text-emerald-400 font-semibold mb-3 text-lg">So entlasten wir Ihre Verwaltung:</h4>
-                                        <ul className="space-y-3 mb-6 text-gray-300">
-                                            <li className="flex items-start"><span className="text-emerald-500 mr-3 text-xl">🔧</span> <span><strong>Anlagenkontrolle & Dokumentation:</strong> Regelmäßige Inspektion von Haus- und Betriebstechnik (Heizung, Beleuchtung) inklusive Zählerstandserfassungen für Ihre Abrechnungen.</span></li>
-                                            <li className="flex items-start"><span className="text-emerald-500 mr-3 text-xl">🛡️</span> <span><strong>Sicherheit & Brandschutz:</strong> Gewissenhafte Freihaltung von Fluchtwegen und Kontrolle der Brandschutzeinrichtungen zum Schutz vor rechtlichen Haftungsrisiken.</span></li>
-                                            <li className="flex items-start"><span className="text-emerald-500 mr-3 text-xl">🛠️</span> <span><strong>Effiziente Kleinreparaturen:</strong> Tropfende Hähne, klemmende Türen oder defekte Leuchtmittel beheben wir sofort – das erspart Ihnen die teure und langwierige Beauftragung von Fremdfirmen.</span></li>
-                                            <li className="flex items-start"><span className="text-emerald-500 mr-3 text-xl">🤝</span> <span><strong>Mieterbetreuung als Puffer:</strong> Wir sind der erste Ansprechpartner vor Ort. Wir lösen Routineprobleme direkt und leiten nur das an Sie weiter, was wirklich Ihren Schreibtisch erreichen muss.</span></li>
+                                        <ul className="space-y-3 mb-8 text-gray-300 font-light">
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">🔧</span> 
+                                                <span><strong>Anlagenkontrolle & Dokumentation:</strong> Regelmäßige Inspektion von Haus- und Betriebstechnik (Heizung, Beleuchtung) inklusive Zählerstandserfassungen für Ihre Abrechnungen.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">🛡️</span> 
+                                                <span><strong>Sicherheit & Brandschutz:</strong> Gewissenhafte Freihaltung von Fluchtwegen und Kontrolle der Brandschutzeinrichtungen zum Schutz vor rechtlichen Haftungsrisiken.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">🛠️</span> 
+                                                <span><strong>Effiziente Kleinreparaturen:</strong> Tropfende Hähne, klemmende Türen oder defekte Leuchtmittel beheben wir sofort – das erspart Ihnen die teure und langwierige Beauftragung von Fremdfirmen.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">🤝</span> 
+                                                <span><strong>Mieterbetreuung als Puffer:</strong> Wir sind der erste Ansprechpartner vor Ort. Wir lösen Routineprobleme direkt und leiten nur das an Sie weiter, was wirklich Ihren Schreibtisch erreichen muss.</span>
+                                            </li>
                                         </ul>
                                     </>
                                 )
@@ -299,39 +293,66 @@ export default function Home() {
                                 )
                             },
                             { 
-                                title: "Grünflächenpflege", 
-                                desc: "Rasen mähen, Sträucher schneiden, Gartenpflege", 
+                                title: "Pflege von Außenanlagen", 
+                                desc: "Rasenmähen, Hecken- und Baumschnitt sowie allgemeine Pflege der Außenbereiche.", 
                                 img: "/Kafelki/service4.png",
                                 details: (
                                     <>
-                                        <p className="mb-4 text-gray-300 leading-relaxed">
-                                            Eine gepflegte Außenanlage ist die Visitenkarte Ihrer Immobilie und steigert ihren Wert spürbar. Doch wir gehen über das bloße Rasenmähen hinaus: Wir denken proaktiv mit. Wir erkennen kranke Pflanzen rechtzeitig, beugen Wildwuchs vor und sorgen dafür, dass Ihre Grünanlagen nicht nur optisch makellos, sondern auch sicher und nachhaltig gesund sind.
+                                        <p className="mb-4 text-gray-300 leading-relaxed font-light">
+                                            Eine gepflegte Außenanlage ist die Visitenkarte Ihrer Immobilie und einer der ersten Eindrücke für Bewohner, Kunden und Besucher. Gepflegte und ordentliche Grünflächen tragen nicht nur zur Optik des Gebäudes bei, sondern auch zum Komfort und zur Sicherheit der Nutzer. Wir kümmern uns um die regelmäßige Pflege der Außenbereiche und behalten den Zustand stets im Blick, damit alles sauber, ordentlich und gepflegt bleibt.
                                         </p>
                                         <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Unser Service für Ihre Außenanlagen:</h4>
-                                        <ul className="space-y-3 mb-6 text-gray-300">
-                                            <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">🌿</span> <span><strong>Ganzheitliche Rasenpflege:</strong> Nicht nur Mähen, sondern auch fachgerechtes Vertikutieren, Nachsäen und Düngen für einen dichten, robusten Rasen ohne Moos.</span></li>
-                                            <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">🛡️</span> <span><strong>Sicherer Baum- & Heckenschnitt:</strong> Optischer Formschnitt und präventive Entfernung von Totholz zur Erfüllung Ihrer Verkehrssicherungspflicht – das schützt Passanten und parkende Autos.</span></li>
-                                            <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">🌱</span> <span><strong>Umweltschonende Unkrautentfernung:</strong> Saubere Wege und Beete ganz ohne verbotene chemische Keulen, plus zuverlässige Beseitigung von rutschigem Herbstlaub.</span></li>
-                                            <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">🚛</span> <span><strong>Komplette Grünschnittentsorgung:</strong> Wir lassen keine unschönen Haufen liegen. Der gesamte Beschnitt wird von uns sofort mitgenommen und fachgerecht sowie umweltschonend entsorgt.</span></li>
+                                        <ul className="space-y-3 mb-8 text-gray-300 font-light">
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">🌿</span> 
+                                                <span><strong>Regelmäßige Pflege der Grünanlagen:</strong> Wir übernehmen das Rasenmähen und die allgemeine Pflege der Außenflächen und sorgen für ein gepflegtes Erscheinungsbild rund um Ihre Immobilie.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">🛡️</span> 
+                                                <span><strong>Schnitt von Bäumen und Hecken:</strong> Wir führen Pflege- und Formschnitte durch und entfernen trockene oder beschädigte Äste, um Sicherheit und Ordnung auf dem Gelände zu gewährleisten.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">🌱</span> 
+                                                <span><strong>Unkrautentfernung und Sauberkeit im Außenbereich:</strong> Wir halten Wege, Einfahrten und Beete sauber, entfernen Unkraut sowie saisonale Verschmutzungen wie Laub.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">🚛</span> 
+                                                <span><strong>Entsorgung von Grünabfällen:</strong> Nach Abschluss der Arbeiten nehmen wir sämtliches Schnittgut mit und entsorgen es fachgerecht.</span>
+                                            </li>
                                         </ul>
                                     </>
                                 )
                             },
                             { 
-                                title: "Graffitientfernung", 
-                                desc: "Rückstandslose Beseitigung und präventiver Schutz für Ihre Fassaden", 
+                                title: "Entfernung von Graffiti und Fassadenverschmutzungen", 
+                                desc: "Schonende und fachgerechte Beseitigung von Schmierereien auf allen Oberflächen.", 
                                 img: "/Kafelki/service5.png", 
                                 details: (
                                     <>
-                                        <p className="mb-4 text-gray-300 leading-relaxed">
-                                            Vandalismus ist ärgerlich, aber eine falsche Reinigung macht es oft noch schlimmer. Wir entfernen Schmierereien nicht einfach nur oberflächlich, sondern sorgen dafür, dass weder unschöne Farbschatten noch Schäden an der Bausubstanz zurückbleiben. Und wir denken weiter: Mit cleverer Prävention machen wir Ihre Immobilie für Sprüher langfristig unattraktiv.
+                                        <p className="mb-4 text-gray-300 leading-relaxed font-light">
+                                            Vandalismus ist ein ärgerliches Problem, das eine schnelle und passende Reaktion erfordert. Wir kümmern uns um die Entfernung von Graffiti sowie anderen Verschmutzungen auf unterschiedlichen Fassaden und Oberflächen und passen die Reinigungsmethode immer an das jeweilige Material und den Verschmutzungsgrad an. Unser Ziel ist es, das ursprüngliche, saubere Erscheinungsbild der Immobilie bestmöglich wiederherzustellen, ohne die Oberfläche zu beschädigen.
                                         </p>
-                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Unser Experten-Ansatz für Ihre Fassade:</h4>
-                                        <ul className="space-y-3 mb-6 text-gray-300">
-                                            <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">🛡️</span> <span><strong>Anti-Graffiti-Beschichtung:</strong> Auf Wunsch tragen wir eine unsichtbare „Opferschicht“ auf. Neue Graffitis können danach ganz einfach und kostengünstig mit Heißwasser abgewaschen werden – ohne aggressive Chemie.</span></li>
-                                            <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">👻</span> <span><strong>Keine Schattenbildung (Ghosting):</strong> Wer nur mit Hochdruck arbeitet, drückt die Farbe tief in den Stein. Wir ziehen die Pigmente mit speziellen, porentiefen Lösemitteln restlos aus dem Untergrund.</span></li>
-                                            <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">⚡</span> <span><strong>Schnelle Reaktion (Broken-Window-Theorie):</strong> Ein Graffiti zieht oft schnell weitere an. Durch unsere zügige Entfernung nehmen wir den Sprayern die „Bühne“ und verhindern weitere Schmierereien.</span></li>
-                                            <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">🌱</span> <span><strong>Gesetzeskonforme Entsorgung:</strong> Abgewaschene Lacke sind oft hochgiftig. Wir fangen das Schmutzwasser fachgerecht auf und entsorgen es nach strengen deutschen Umweltauflagen – das schützt Sie als Eigentümer vor empfindlichen Bußgeldern.</span></li>
+                                        <p className="mb-4 text-gray-300 leading-relaxed font-light">
+                                            Je nach Situation setzen wir geeignete Reinigungsverfahren und Mittel ein, die für die jeweilige Oberfläche schonend sind. Dabei achten wir darauf, dass die Arbeiten fachgerecht und mit Rücksicht auf die Bausubstanz durchgeführt werden.
+                                        </p>
+                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Unser Leistungsumfang:</h4>
+                                        <ul className="space-y-3 mb-8 text-gray-300 font-light">
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">🧽</span> 
+                                                <span><strong>Entfernung von Graffiti und Verschmutzungen:</strong> Wir entfernen Schriftzüge, Farbrückstände und andere Verschmutzungen von Fassaden, Wänden und Gemeinschaftsflächen.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">🏢</span> 
+                                                <span><strong>Anpassung der Methode an die Oberfläche:</strong> Die Reinigungsmethode wird je nach Material und Zustand der Fläche individuell ausgewählt.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">⚡</span> 
+                                                <span><strong>Schnelle Durchführung der Arbeiten:</strong> Wir reagieren zeitnah, um das saubere Erscheinungsbild der Immobilie schnell wiederherzustellen.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">🌱</span> 
+                                                <span><strong>Sorgfältige und sichere Arbeitsweise:</strong> Wir arbeiten materialgerecht und achten auf einen fachgerechten Umgang mit den Verschmutzungen.</span>
+                                            </li>
                                         </ul>
                                     </>
                                 )
@@ -361,15 +382,27 @@ export default function Home() {
                                 img: "/Kafelki/service7.png", 
                                 details: (
                                     <>
-                                        <p className="mb-4 text-gray-300 leading-relaxed">
-                                            Eine Haushaltsauflösung oder Firmenräumung ist oft mit emotionalem und zeitlichem Stress verbunden. Wir nehmen Ihnen diese Last komplett ab. Ob vollgestellter Keller, komplexer Firmenumzug oder eine sensible Nachlassräumung – wir arbeiten zügig, diskret und übergeben Ihre Räumlichkeiten exakt so, wie Vermieter oder Käufer es erwarten.
+                                        <p className="mb-4 text-gray-300 leading-relaxed font-light">
+                                            Eine Haushaltsauflösung oder Firmenräumung ist oft mit emotionalem und zeitlichem Stress verbunden. Wir nehmen Ihnen diese Last komplett ab. Ob vollgestellter Keller, Büroauflösung oder Räumung nach Mietende – wir arbeiten zügig, diskret und bereiten die Räumlichkeiten für die weitere Übergabe vor.
                                         </p>
                                         <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Warum wir der richtige Partner sind:</h4>
-                                        <ul className="space-y-3 mb-6 text-gray-300">
-                                            <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">🤫</span> <span><strong>Absolute Diskretion:</strong> Besonders bei sensiblen Fällen (wie Nachlässen oder Messie-Wohnungen) agieren wir äußerst respektvoll. Wir arbeiten zügig und diskret, um unnötiges Aufsehen in der Nachbarschaft zu vermeiden.</span></li>
-                                            <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">♻️</span> <span><strong>Mülltrennung spart Ihr Geld:</strong> Wir werfen nicht einfach alles in einen teuren Mischcontainer. Durch unsere strikte Vorab-Trennung von Holz, Metall und Sondermüll senken wir die Entsorgungskosten auf dem Recyclinghof massiv.</span></li>
-                                            <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">🧹</span> <span><strong>Besenreine Übergabegarantie:</strong> Wir tragen nicht nur Kisten raus. Wir entfernen Spinnweben, fegen gründlich durch, ziehen auf Wunsch alte Nägel aus den Wänden und hinterlassen den Raum bereit für die Schlüsselübergabe.</span></li>
-                                            <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">📦</span> <span><strong>Alles aus einer Hand:</strong> Sie müssen einen Teil der Möbel in ein neues Büro oder eine andere Wohnung transportieren und den Rest entsorgen? Wir kombinieren Umzug und Entrümpelung nahtlos in einem Einsatz.</span></li>
+                                        <ul className="space-y-3 mb-8 text-gray-300 font-light">
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">🤫</span> 
+                                                <span><strong>Absolute Diskretion:</strong> Besonders in sensiblen Situationen (z. B. Nachlassräumungen oder stark überfüllten Wohnungen) arbeiten wir ruhig und unauffällig, um unnötige Aufmerksamkeit in der Nachbarschaft zu vermeiden.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">♻️</span> 
+                                                <span><strong>Mülltrennung spart Kosten:</strong> Wir entsorgen nicht alles als gemischten Abfall. Durch die konsequente Trennung von Holz, Metall und Sonderabfällen reduzieren wir die Entsorgungskosten deutlich.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">🧹</span> 
+                                                <span><strong>Vorbereitung der Räumlichkeiten zur Übergabe:</strong> Auf Wunsch hinterlassen wir die Räume geräumt und grob gereinigt, sodass sie für Eigentümer oder neue Mieter bereit zur Übergabe sind.</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                                <span className="text-emerald-500 mr-3 text-xl">📦</span> 
+                                                <span><strong>Alles aus einer Hand:</strong> Wir kombinieren Räumung und Transport. Ein Teil der Gegenstände kann auf Wunsch in eine neue Adresse gebracht werden, der Rest wird fachgerecht entsorgt.</span>
+                                            </li>
                                         </ul>
                                     </>
                                 )
