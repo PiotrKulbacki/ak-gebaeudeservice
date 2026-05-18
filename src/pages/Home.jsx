@@ -67,9 +67,7 @@ export default function Home() {
                     {/* Futurystyczne Menu (Desktop) */}
                     <nav className="hidden custom-md:flex items-center gap-12 ml-8">
                         {items.map((item, index) => {
-                            // ZMIANA: hover:text-emerald-400 zamiast cyan
                             const linkClasses = "relative text-gray-300 text-base font-medium tracking-widest uppercase hover:text-emerald-400 transition-colors duration-300 group";
-                            // ZMIANA: bg-emerald-400 oraz shadow dopasowany do zieleni (rgba: 16,185,129)
                             const hoverLine = <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-emerald-400 transition-all duration-300 group-hover:w-full shadow-[0_0_8px_rgba(16,185,129,0.8)]"></span>;
 
                             if (item.href.startsWith('#')) {
@@ -92,9 +90,7 @@ export default function Home() {
 
                     {/* Cyber-przycisk Kontakt */}
                     <div className="hidden custom-md:block">
-                        {/* ZMIANA: border-emerald-500/50 oraz cienie (shadow) w kolorze emerald */}
                         <Link to='/contact' className="relative inline-flex items-center justify-center px-10 py-3 overflow-hidden font-bold text-white bg-slate-900 border border-emerald-500/50 rounded-full hover:bg-slate-800 group shadow-[0_0_15px_rgba(16,185,129,0.2)] hover:shadow-[0_0_30px_rgba(16,185,129,0.6)] transition-all duration-300">
-                            {/* ZMIANA: Tło wypełniające przycisk po najechaniu na bg-emerald-500 */}
                             <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-emerald-500 rounded-full group-hover:w-60 group-hover:h-60"></span>
                             <span className="relative flex items-center gap-2 text-base uppercase tracking-wider group-hover:text-slate-900">
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
@@ -155,14 +151,14 @@ export default function Home() {
                 <div className="absolute inset-0 z-0">
                     {/* Zdjęcie 1: Tylko dla Mobile w pionie (Portrait) */}
                     <img 
-                        src="/hausmeister.png" 
+                        src="/hausmeister11.webp" 
                         alt="Hausmeister Portrait" 
                         className="absolute -top-12 left-0 w-full h-[calc(100%+3rem)] object-cover object-top md:hidden landscape:hidden" 
                     />
                     
                     {/* Zdjęcie 2: Dla Desktopu ORAZ Mobile w poziomie (Landscape) */}
                     <img 
-                        src="/hausmeister4.png" 
+                        src="/hausmeister44.webp" 
                         alt="Hausmeister Landscape" 
                         className="absolute inset-0 object-cover object-top w-full h-full mt-20 md:mt-28 hidden md:block landscape:block" 
                     />
@@ -172,8 +168,6 @@ export default function Home() {
 
                 {/* Kontener z treścią */}
                 <div className="relative z-10 flex flex-col items-center justify-center px-6 text-center max-w-4xl mx-auto pt-32 sm:pt-40 pb-10">
-                    
-                    {/* NAGŁÓWEK - Na telefonach wyświetli się jako pierwszy (order-1), na komputerach jako drugi (md:order-2) */}
                     <h1 className="order-1 md:order-2 text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-5 md:mb-6 tracking-tight leading-tight drop-shadow-2xl">
                         Die Komplettlösung für Ihre <br className="hidden sm:block" />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-500">Immobilienpflege</span>
@@ -248,7 +242,7 @@ export default function Home() {
                             { 
                                 title: "Büroreinigung", 
                                 desc: "Hygienische Sauberkeit für Ihre Arbeitsplätze, Küchen und Sanitäranlagen", 
-                                img: "/Kafelki/service2.png", // Pamiętaj, żeby podmienić ten plik u siebie w folderze!
+                                img: "/Kafelki/service2.png",
                                 details: (
                                     <>
                                         <p className="mb-4 text-gray-300 leading-relaxed">
