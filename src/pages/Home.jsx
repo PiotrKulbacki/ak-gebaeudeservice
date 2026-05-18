@@ -178,8 +178,8 @@ export default function Home() {
                 {/* Kontener z treścią */}
                 <div className="relative z-10 flex flex-col items-center justify-center px-6 text-center max-w-4xl mx-auto pt-32 sm:pt-40 pb-10">
                     <h1 className="order-1 md:order-2 text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-5 md:mb-6 tracking-tight leading-tight drop-shadow-2xl">
-                        Die Komplettlösung für Ihre <br className="hidden sm:block" />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-500">Immobilienpflege</span>
+                        Professioneller Hausmeisterservice für Ihre <br className="hidden sm:block" />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-500">Immobilienpflege in Berlin</span>
                     </h1>
 
                     {/* SZKLANY KONTENER NA TEKST - Zawsze na trzecim miejscu (order-3) */}
