@@ -1,25 +1,38 @@
-
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Home from './pages/Home'
-import ContactForm from './pages/ContactForm'
-import Impressum from './Gesetzt/Impressum';
-import Datenschutz from './Gesetzt/Datenschutz';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { lazy, Suspense } from 'react';
+import Home from './pages/Home';
 import ScrollToTop from './ScrollToTop';
-import ServiceHausmeister from './pages/ServiceHausmeister';
-import Philosophie from './pages/Philosophie';
+
+const ContactForm = lazy(() => import('./pages/ContactForm'));
+const Impressum = lazy(() => import('./Gesetzt/Impressum'));
+const Datenschutz = lazy(() => import('./Gesetzt/Datenschutz'));
+const ServiceHausmeister = lazy(() => import('./pages/ServiceHausmeister'));
+const Philosophie = lazy(() => import('./pages/Philosophie'));
 
 export default function App() {
   return (
     <Router>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/contact' element={<ContactForm />} />
-        <Route path='/impressum' element={<Impressum />} />
-        <Route path='/datenschutz' element={<Datenschutz />} />
-        <Route path="/leistungen/hausmeisterservice" element={<ServiceHausmeister />} />
-        <Route path="/philosophie" element={<Philosophie />} />
-      </Routes>
       <ScrollToTop />
+
+      <Suspense
+        fallback={
+          <div className="min-h-screen flex items-center justify-center bg-slate-950 text-white">
+            Loading...
+          </div>
+        }
+      >
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<ContactForm />} />
+          <Route path="/impressum" element={<Impressum />} />
+          <Route path="/datenschutz" element={<Datenschutz />} />
+          <Route
+            path="/leistungen/hausmeisterservice"
+            element={<ServiceHausmeister />}
+          />
+          <Route path="/philosophie" element={<Philosophie />} />
+        </Routes>
+      </Suspense>
     </Router>
   );
 }

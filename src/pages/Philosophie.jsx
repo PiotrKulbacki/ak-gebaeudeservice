@@ -71,7 +71,7 @@ export default function Philosophie() {
                         className="w-full md:w-1/2 flex justify-center"
                     >
                         <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-emerald-500/50 p-2 shadow-[0_0_40px_rgba(16,185,129,0.2)]">
-                            <img src="/hausmeister.png" alt="Gründer" className="w-full h-full object-cover object-top rounded-full filter grayscale hover:grayscale-0 transition-all duration-700" />
+                            <img src="/hausmeister.webp" alt="Gründer" className="w-full h-full object-cover object-top rounded-full filter grayscale hover:grayscale-0 transition-all duration-700" />
                         </div>
                     </motion.div>
                     <motion.div 
