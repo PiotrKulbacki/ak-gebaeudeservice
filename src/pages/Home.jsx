@@ -102,6 +102,9 @@ export default function Home() {
                     {/* Hamburger dla urządzeń mobilnych (Neonowy design) */}
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+                        aria-expanded={isMenuOpen}
+                        aria-controls="mobile-menu"
                         className="relative flex flex-col justify-center items-center w-10 h-10 border border-emerald-500/30 rounded-full bg-emerald-500/10 hover:bg-emerald-500/20 transition-all duration-300 custom-md:hidden z-50 group"
                     >
                         {isMenuOpen ? (
@@ -118,6 +121,7 @@ export default function Home() {
 
                 {/* Rozwijane menu mobilne w stylu Glassmorphism */}
                 <div
+                    id="mobile-menu"
                     className={`absolute top-full left-0 w-full mt-4 bg-slate-950/90 backdrop-blur-2xl border border-emerald-500/20 rounded-3xl transition-all duration-500 overflow-hidden custom-md:hidden ${
                         isMenuOpen ? 'max-h-96 opacity-100 py-6 shadow-[0_0_30px_rgba(16,185,129,0.2)]' : 'max-h-0 opacity-0 py-0 border-transparent'}`} >
                     <div className="flex flex-col gap-6 px-6 text-center text-gray-300">
@@ -131,7 +135,7 @@ export default function Home() {
                                 {item.label}
                             </a>
                         ))}
-                        <div
+                        <button
                             className="flex justify-center items-center cursor-pointer mt-2 px-6 py-3 rounded-full bg-gradient-to-r from-emerald-500 to-green-600 text-white font-bold tracking-widest uppercase text-sm shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:scale-105 transition-all duration-300"
                             onClick={() => {
                                 setIsMenuOpen(false);
@@ -139,7 +143,7 @@ export default function Home() {
                             }}
                         >
                             <span>Kontakt</span>
-                        </div>
+                        </button>
                     </div>
                 </div>
             </header>
