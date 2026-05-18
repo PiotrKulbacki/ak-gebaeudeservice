@@ -163,17 +163,7 @@ export default function Home() {
                         loading="eager"
                         decoding="async"
                         sizes="100vw"
-                        className="
-                        absolute inset-0
-                        w-full h-full
-                        object-cover
-
-                        object-center
-                        md:object-top
-
-                        mt-20
-                        md:mt-28
-                        "
+                        className="absolute inset-0 w-full h-full object-cover object-center md:object-top mt-20 md:mt-28"
                     />
                 </picture>
                     <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-900/30 to-slate-950"></div>
@@ -182,8 +172,8 @@ export default function Home() {
                 {/* Kontener z treścią */}
                 <div className="relative z-10 flex flex-col items-center justify-center px-6 text-center max-w-4xl mx-auto pt-32 sm:pt-40 pb-10">
                     <h1 className="order-1 md:order-2 text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-5 md:mb-6 tracking-tight leading-tight drop-shadow-2xl">
-                        Professioneller Hausmeisterservice für Ihre <br className="hidden sm:block" />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-500">Immobilienpflege in Berlin</span>
+                        Hausmeisterservice für <br className="hidden sm:block" />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-500">Immobilienpflege </span><br />in Berlin
                     </h1>
 
                     {/* SZKLANY KONTENER NA TEKST - Zawsze na trzecim miejscu (order-3) */}
@@ -224,7 +214,7 @@ export default function Home() {
                             { 
                                 title: "Hausmeisterservice", 
                                 desc: "Wartung und Betreuung von Liegenschaften, Kontrolle technischer Anlagen und Brandschutz", 
-                                img: "/Kafelki/Hausmeisterservice.png", 
+                                img: "/Kafelki/Hausmeisterservice.webp", 
                                 details: (
                                     <>
                                         <p className="mb-4 text-gray-300 leading-relaxed font-light">
@@ -255,7 +245,7 @@ export default function Home() {
                             { 
                                 title: "Büroreinigung", 
                                 desc: "Hygienische Sauberkeit für Ihre Arbeitsplätze, Küchen und Sanitäranlagen", 
-                                img: "/Kafelki/service2.png",
+                                img: "/Kafelki/service2.webp",
                                 details: (
                                     <>
                                         <p className="mb-4 text-gray-300 leading-relaxed">
@@ -274,7 +264,7 @@ export default function Home() {
                             {
                                 title: "Bauendreinigung",
                                 desc: "Effiziente Beseitigung von Baustaub und Schmutz für eine perfekte Schlüsselübergabe.",
-                                img: "/Kafelki/service3.png", 
+                                img: "/Kafelki/service3.webp", 
                                 details: (
                                     <>
                                         <h3 className="text-emerald-400 font-semibold mb-3 text-lg">Bezugsfertig und makellos:</h3>
@@ -302,7 +292,7 @@ export default function Home() {
                             { 
                                 title: "Pflege von Außenanlagen", 
                                 desc: "Rasenmähen, Hecken- und Baumschnitt sowie allgemeine Pflege der Außenbereiche.", 
-                                img: "/Kafelki/service4.png",
+                                img: "/Kafelki/service4.webp",
                                 details: (
                                     <>
                                         <p className="mb-4 text-gray-300 leading-relaxed font-light">
@@ -333,7 +323,7 @@ export default function Home() {
                             { 
                                 title: "Entfernung von Graffiti und Fassadenverschmutzungen", 
                                 desc: "Schonende und fachgerechte Beseitigung von Schmierereien auf allen Oberflächen.", 
-                                img: "/Kafelki/service5.png", 
+                                img: "/Kafelki/service5.webp", 
                                 details: (
                                     <>
                                         <p className="mb-4 text-gray-300 leading-relaxed font-light">
@@ -367,7 +357,7 @@ export default function Home() {
                             { 
                                 title: "Winterdienst", 
                                 desc: "Schneeräumung und Streudienst für Ihre rechtliche und finanzielle Sicherheit", 
-                                img: "/Kafelki/service6.png", 
+                                img: "/Kafelki/service6.webp", 
                                 details: (
                                     <>
                                         <p className="mb-4 text-gray-300 leading-relaxed">
@@ -386,7 +376,7 @@ export default function Home() {
                             { 
                                 title: "Entrümpelung & Umzug", 
                                 desc: "Diskrete Räumung und besenreine Übergabe von Wohnungen und Gewerbe", 
-                                img: "/Kafelki/service7.png", 
+                                img: "/Kafelki/service7.webp", 
                                 details: (
                                     <>
                                         <p className="mb-4 text-gray-300 leading-relaxed font-light">
@@ -417,7 +407,7 @@ export default function Home() {
                             { 
                                 title: "Fensterreinigung innen & außen", 
                                 desc: "Streifenfreier Glanz für Glasflächen, Rahmen, Falze und Rollläden", 
-                                img: "/Kafelki/service8.png", 
+                                img: "/Kafelki/service8.webp", 
                                 details: (
                                     <>
                                         <p className="mb-4 text-gray-300 leading-relaxed">
@@ -436,7 +426,7 @@ export default function Home() {
                             {
                                 title: "Maler- & Spachtelarbeiten",
                                 desc: "Frische Farben und glatte Wände für ein neues Wohngefühl oder den Mieterwechsel.",
-                                img: "/Kafelki/Maler.png",
+                                img: "/Kafelki/Maler.webp",
                                 details: (
                                     <>
                                         <h3 className="text-emerald-400 font-semibold mb-3 text-lg">Professionelle Wandgestaltung:</h3>
@@ -463,7 +453,7 @@ export default function Home() {
                             {
                                 title: "Kleinreparaturen",
                                 desc: "Schnelle Hilfe bei defekten Türklinken, klemmenden Fenstern oder losen Scharnieren.",
-                                img: "/Kafelki/Kleinreparaturen.png",
+                                img: "/Kafelki/Kleinreparaturen.webp",
                                 details: (
                                     <>
                                         <h3 className="text-emerald-400 font-semibold mb-3 text-lg">Werterhalt Ihrer Immobilie:</h3>
@@ -490,7 +480,7 @@ export default function Home() {
                             {
                                 title: "Montageservice",
                                 desc: "Fachgerechte Montage von Regalen, Lampen, Gardinenstangen und Kleinmöbeln.",
-                                img: "/Kafelki/Montageservice.png",
+                                img: "/Kafelki/Montageservice.webp",
                                 details: (
                                     <>
                                         <h3 className="text-emerald-400 font-semibold mb-3 text-lg">Wir bringen es an die Wand:</h3>
@@ -517,7 +507,7 @@ export default function Home() {
                             {
                                 title: "Silikon- & Fugenarbeiten",
                                 desc: "Erneuerung von alten Fugen in Bad und Küche für eine hygienische und frische Optik.",
-                                img: "/Kafelki/Silikon.png",
+                                img: "/Kafelki/Silikon.webp",
                                 details: (
                                     <>
                                         <h3 className="text-emerald-400 font-semibold mb-3 text-lg">Schutz vor Feuchtigkeit:</h3>
@@ -575,6 +565,8 @@ export default function Home() {
                                         <img
                                             src={service.img}
                                             alt={service.title}
+                                            loading="lazy"
+                                            decoding="async"
                                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent"></div>
