@@ -146,23 +146,32 @@ export default function Home() {
 
             {/* Nowoczesna Sekcja Hero */}
             <section className="relative w-full min-h-[100vh] flex items-center justify-center mt-0 overflow-hidden pb-12">
-                
-                {/* Zdjęcie w tle z kinowym gradientem */}
                 <div className="absolute inset-0 z-0">
-                    {/* Zdjęcie 1: Tylko dla Mobile w pionie (Portrait) */}
-                    <img 
-                        src="/hausmeister11.webp" 
-                        alt="Hausmeister Portrait" 
-                        className="absolute -top-12 left-0 w-full h-[calc(100%+3rem)] object-cover object-top md:hidden landscape:hidden" 
+                <picture>
+                    <source
+                        media="(min-width: 768px)"
+                        srcSet="/hausmeister44.webp"
                     />
-                    
-                    {/* Zdjęcie 2: Dla Desktopu ORAZ Mobile w poziomie (Landscape) */}
-                    <img 
-                        src="/hausmeister44.webp" 
-                        alt="Hausmeister Landscape" 
-                        className="absolute inset-0 object-cover object-top w-full h-full mt-20 md:mt-28 hidden md:block landscape:block" 
+                    <img
+                        src="/hausmeister11.webp"
+                        alt="Hausmeister"
+                        fetchPriority="high"
+                        loading="eager"
+                        decoding="async"
+                        sizes="100vw"
+                        className="
+                        absolute inset-0
+                        w-full h-full
+                        object-cover
+
+                        object-center
+                        md:object-top
+
+                        mt-20
+                        md:mt-28
+                        "
                     />
-                    
+                </picture>
                     <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-900/30 to-slate-950"></div>
                 </div>
 
