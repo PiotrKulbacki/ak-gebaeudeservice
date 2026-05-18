@@ -57,7 +57,7 @@ export default function Home() {
                         <div className="relative flex items-center h-12 sm:h-16 custom-md:h-20 w-24 sm:w-32 custom-md:w-40 transition-all duration-300">
                             <div className="absolute inset-0 bg-white/20 blur-xl rounded-full scale-[1.5] origin-left"></div>
                             <img 
-                                src="/logo5.png" 
+                                src="/logo.webp" 
                                 alt="Logo Gebäudeservice Arasim & Kedzierski" 
                                 className="relative z-1 h-full w-full object-contain drop-shadow-[0_0_12px_rgba(255,255,255,0.6)] scale-[1.6] custom-md:scale-[1.8] origin-left" 
                             />
@@ -151,21 +151,23 @@ export default function Home() {
             {/* Nowoczesna Sekcja Hero */}
             <section className="relative w-full min-h-[100vh] flex items-center justify-center mt-0 overflow-hidden pb-12">
                 <div className="absolute inset-0 z-0">
-                <picture>
-                    <source
-                        media="(min-width: 768px)"
-                        srcSet="/hausmeister4.webp"
-                    />
-                    <img
-                        src="/hausmeister.webp"
-                        alt="Hausmeister"
-                        fetchPriority="high"
-                        loading="eager"
-                        decoding="async"
-                        sizes="100vw"
-                        className="absolute inset-0 w-full h-full object-cover object-center md:object-top mt-20 md:mt-28"
-                    />
-                </picture>
+                    <picture>
+                        <source
+                            media="(min-width: 768px)"
+                            srcSet="/hausmeister4.webp"
+                        />
+                        <img
+                            src="/hausmeister.webp"
+                            alt="Hausmeister"
+                            fetchPriority="high"
+                            loading="eager"
+                            decoding="async"
+                            sizes="100vw"
+                            width="1920"
+                            height="1080"
+                            className="absolute inset-0 w-full h-full object-cover object-center md:object-top mt-20 md:mt-28"
+                        />
+                    </picture>
                     <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-900/30 to-slate-950"></div>
                 </div>
 
@@ -791,10 +793,9 @@ export default function Home() {
 
                 <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
 
-                    {/* Sekcja Logo - Wielkie i bez tła */}
                     <div className="mb-6">
                         <img 
-                            src="/logo5.png" 
+                            src="/logo.webp" 
                             alt="Arasim & Kedzierski Gebäudeservice" 
                             className="h-32 sm:h-44 md:h-52 w-auto object-contain" 
                         />

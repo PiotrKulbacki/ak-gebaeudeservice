@@ -148,7 +148,7 @@ export default function Datenschutz() {
 
                     <div className="flex justify-center mt-12">
                         <img 
-                            src="/logo5.png" 
+                            src="/logo.webp" 
                             alt="Logo Arasim & Kędzierski" 
                             className="h-24 sm:h-44 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 drop-shadow-[0_0_15px_rgba(255,255,255,0.05)]" 
                         />
