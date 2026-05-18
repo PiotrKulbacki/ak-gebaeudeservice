@@ -220,8 +220,8 @@ export default function ContactForm() {
                                     <option value="Hausmeisterservice" className="bg-slate-900 text-white">Hausmeisterservice</option>
                                     <option value="Büroreinigung" className="bg-slate-900 text-white">Büroreinigung</option>
                                     <option value="Bauendreinigung" className="bg-slate-900 text-white">Bauendreinigung</option>
-                                    <option value="Grünflächenpflege" className="bg-slate-900 text-white">Grünflächenpflege</option>
-                                    <option value="Graffitientfernung" className="bg-slate-900 text-white">Graffitientfernung</option>
+                                    <option value="Pflege von Außenanlagen" className="bg-slate-900 text-white">Pflege von Außenanlagen</option>
+                                    <option value="Entfernung von Graffiti und Fassadenverschmutzungen" className="bg-slate-900 text-white">Entfernung von Graffiti und Fassadenverschmutzungen</option>
                                     <option value="Winterdienst" className="bg-slate-900 text-white">Winterdienst</option>
                                     <option value="Entrümpelung & Umzug" className="bg-slate-900 text-white">Entrümpelung & Umzug</option>
                                     <option value="Fensterreinigung innen & außen" className="bg-slate-900 text-white">Fensterreinigung innen & außen</option>
