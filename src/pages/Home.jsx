@@ -150,10 +150,10 @@ export default function Home() {
                 <picture>
                     <source
                         media="(min-width: 768px)"
-                        srcSet="/hausmeister44.webp"
+                        srcSet="/hausmeister4.webp"
                     />
                     <img
-                        src="/hausmeister11.webp"
+                        src="/hausmeister.webp"
                         alt="Hausmeister"
                         fetchPriority="high"
                         loading="eager"
@@ -226,7 +226,7 @@ export default function Home() {
                                         <p className="mb-4 text-gray-300 leading-relaxed font-light">
                                             Ein reibungsloser Ablauf im Hintergrund ist das Fundament jeder rentablen Immobilie. Als Ihr proaktiver Service vor Ort sind wir das Bindeglied zwischen Eigentümer, Verwaltung und Mietern. Wir erkennen Instandhaltungsbedarfe, bevor sie zu teuren Notfällen werden, beheben kleine Mängel sofort selbst und entlasten Sie spürbar vom zeitaufwendigen Tagesgeschäft.
                                         </p>
-                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">So entlasten wir Ihre Verwaltung:</h4>
+                                        <h3 className="text-emerald-400 font-semibold mb-3 text-lg">So entlasten wir Ihre Verwaltung:</h3>
                                         <ul className="space-y-3 mb-8 text-gray-300 font-light">
                                             <li className="flex items-start">
                                                 <span className="text-emerald-500 mr-3 text-xl">🔧</span> 
@@ -257,7 +257,7 @@ export default function Home() {
                                         <p className="mb-4 text-gray-300 leading-relaxed">
                                             Ein sauberes Büro ist nicht nur die Visitenkarte Ihres Unternehmens gegenüber Kunden, sondern auch die wichtigste Grundlage für ein produktives und gesundes Arbeitsklima. Wir sorgen mit unserer professionellen Unterhaltsreinigung für kompromisslose Hygiene an jedem Arbeitsplatz – zuverlässig, diskret und außerhalb Ihrer Kernarbeitszeiten.
                                         </p>
-                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Unsere Leistungen im Überblick:</h4>
+                                        <h3 className="text-emerald-400 font-semibold mb-3 text-lg">Unsere Leistungen im Überblick:</h3>
                                         <ul className="space-y-3 mb-6 text-gray-300">
                                             <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">🖥️</span> <span><strong>Arbeitsplatzreinigung:</strong> Schonende und gründliche Reinigung von Schreibtischen, Monitoren und Telefonen.</span></li>
                                             <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">✨</span> <span><strong>Sanitär & Küche:</strong> Hygienische Tiefenreinigung und Desinfektion von Waschräumen und Mitarbeiterküchen.</span></li>
@@ -273,11 +273,11 @@ export default function Home() {
                                 img: "/Kafelki/service3.png", 
                                 details: (
                                     <>
-                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Bezugsfertig und makellos:</h4>
+                                        <h3 className="text-emerald-400 font-semibold mb-3 text-lg">Bezugsfertig und makellos:</h3>
                                         <p className="text-gray-300 mb-4 font-light leading-relaxed">
                                             Nach Abschluss der Bau- oder Renovierungsarbeiten hinterlassen Handwerker oft hartnäckigen Schmutz. Wir sorgen für den finalen Glanz, damit Sie Ihr Objekt termingerecht und in perfektem Zustand übergeben oder beziehen können.
                                         </p>
-                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Unsere Leistungen umfassen:</h4>
+                                        <h3 className="text-emerald-400 font-semibold mb-3 text-lg">Unsere Leistungen umfassen:</h3>
                                         <ul className="space-y-3 mb-8 text-gray-300 font-light">
                                             <li className="flex items-start">
                                                 <span className="text-emerald-500 mr-3 text-xl">🧹</span> 
@@ -304,7 +304,7 @@ export default function Home() {
                                         <p className="mb-4 text-gray-300 leading-relaxed font-light">
                                             Eine gepflegte Außenanlage ist die Visitenkarte Ihrer Immobilie und einer der ersten Eindrücke für Bewohner, Kunden und Besucher. Gepflegte und ordentliche Grünflächen tragen nicht nur zur Optik des Gebäudes bei, sondern auch zum Komfort und zur Sicherheit der Nutzer. Wir kümmern uns um die regelmäßige Pflege der Außenbereiche und behalten den Zustand stets im Blick, damit alles sauber, ordentlich und gepflegt bleibt.
                                         </p>
-                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Unser Service für Ihre Außenanlagen:</h4>
+                                        <h3 className="text-emerald-400 font-semibold mb-3 text-lg">Unser Service für Ihre Außenanlagen:</h3>
                                         <ul className="space-y-3 mb-8 text-gray-300 font-light">
                                             <li className="flex items-start">
                                                 <span className="text-emerald-500 mr-3 text-xl">🌿</span> 
@@ -338,7 +338,7 @@ export default function Home() {
                                         <p className="mb-4 text-gray-300 leading-relaxed font-light">
                                             Je nach Situation setzen wir geeignete Reinigungsverfahren und Mittel ein, die für die jeweilige Oberfläche schonend sind. Dabei achten wir darauf, dass die Arbeiten fachgerecht und mit Rücksicht auf die Bausubstanz durchgeführt werden.
                                         </p>
-                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Unser Leistungsumfang:</h4>
+                                        <h3 className="text-emerald-400 font-semibold mb-3 text-lg">Unser Leistungsumfang:</h3>
                                         <ul className="space-y-3 mb-8 text-gray-300 font-light">
                                             <li className="flex items-start">
                                                 <span className="text-emerald-500 mr-3 text-xl">🧽</span> 
@@ -369,7 +369,7 @@ export default function Home() {
                                         <p className="mb-4 text-gray-300 leading-relaxed">
                                             Schnee und Glatteis sind nicht nur ein Hindernis, sondern vor allem ein enormes Haftungsrisiko für jeden Immobilienbesitzer. Mit unserem professionellen Winterdienst können Sie auch bei Minusgraden entspannt schlafen. Wir räumen und streuen zuverlässig, noch bevor der erste Fußgänger Ihre Wege betritt – und nehmen Ihnen dabei die volle juristische Verantwortung ab.
                                         </p>
-                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Sicherheit, die weiter denkt:</h4>
+                                        <h3 className="text-emerald-400 font-semibold mb-3 text-lg">Sicherheit, die weiter denkt:</h3>
                                         <ul className="space-y-3 mb-6 text-gray-300">
                                             <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">⚖️</span> <span><strong>Haftungsübernahme:</strong> Wir übernehmen Ihre gesetzliche Verkehrssicherungspflicht. Kommt es trotz Räumung zu einem Sturz, sind Sie rechtlich und finanziell durch unsere Versicherung geschützt.</span></li>
                                             <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">📝</span> <span><strong>Lückenlose Dokumentation:</strong> Jeder unserer Einsätze wird exakt mit Datum und Uhrzeit protokolliert. Im Schadensfall ist dieses Tourenbuch Ihr wasserdichter Nachweis für die Versicherung.</span></li>
@@ -388,7 +388,7 @@ export default function Home() {
                                         <p className="mb-4 text-gray-300 leading-relaxed font-light">
                                             Eine Haushaltsauflösung oder Firmenräumung ist oft mit emotionalem und zeitlichem Stress verbunden. Wir nehmen Ihnen diese Last komplett ab. Ob vollgestellter Keller, Büroauflösung oder Räumung nach Mietende – wir arbeiten zügig, diskret und bereiten die Räumlichkeiten für die weitere Übergabe vor.
                                         </p>
-                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Warum wir der richtige Partner sind:</h4>
+                                        <h3 className="text-emerald-400 font-semibold mb-3 text-lg">Warum wir der richtige Partner sind:</h3>
                                         <ul className="space-y-3 mb-8 text-gray-300 font-light">
                                             <li className="flex items-start">
                                                 <span className="text-emerald-500 mr-3 text-xl">🤫</span> 
@@ -419,7 +419,7 @@ export default function Home() {
                                         <p className="mb-4 text-gray-300 leading-relaxed">
                                             Strahlend saubere Fenster bringen nicht nur mehr Tageslicht in Ihre Räume, sondern werten Ihre gesamte Immobilie optisch sofort auf. Während viele Anbieter das Glas nur oberflächlich abziehen, verstehen wir unter einer professionellen Fensterreinigung das komplette Paket. Wir kümmern uns um die versteckten Details, die oft übersehen werden, und garantieren Ihnen einen buchstäblich ungetrübten Ausblick.
                                         </p>
-                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Unsere Definition von echten sauberen Fenstern:</h4>
+                                        <h3 className="text-emerald-400 font-semibold mb-3 text-lg">Unsere Definition von echten sauberen Fenstern:</h3>
                                         <ul className="space-y-3 mb-6 text-gray-300">
                                             <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">✨</span> <span><strong>Streifenfreie Brillanz:</strong> Wir nutzen professionelles Equipment und spezielle Einwascher, die auch bei direkter Sonneneinstrahlung absolut streifen- und schlierenfreie Glasflächen hinterlassen.</span></li>
                                             <li className="flex items-start"><span className="text-cyan-500 mr-3 text-xl">🔍</span> <span><strong>Rahmen- & Falzreinigung:</strong> Der „Aha-Effekt“ für unsere Kunden: Wir reinigen nicht nur die Scheibe, sondern wischen die Rahmen feucht ab und entfernen den hartnäckigen, schwarzen Schmutz aus den inneren Fensterfalzen und Dichtungen.</span></li>
@@ -435,7 +435,7 @@ export default function Home() {
                                 img: "/Kafelki/Maler.png",
                                 details: (
                                     <>
-                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Professionelle Wandgestaltung:</h4>
+                                        <h3 className="text-emerald-400 font-semibold mb-3 text-lg">Professionelle Wandgestaltung:</h3>
                                         <p className="text-gray-300 mb-4 font-light leading-relaxed">
                                             Ob Ausbesserungen nach einem Umzug oder ein komplett neuer Anstrich – wir sorgen für saubere Kanten i perfekte Oberflächen.
                                         </p>
@@ -462,7 +462,7 @@ export default function Home() {
                                 img: "/Kafelki/Kleinreparaturen.png",
                                 details: (
                                     <>
-                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Werterhalt Ihrer Immobilie:</h4>
+                                        <h3 className="text-emerald-400 font-semibold mb-3 text-lg">Werterhalt Ihrer Immobilie:</h3>
                                         <p className="text-gray-300 mb-4 font-light leading-relaxed">
                                             Oft sind es die kleinen Dinge, die im Alltag stören. Wir erledigen kleine Instandsetzungen schnell und unkompliziert, bevor daraus größere Schäden entstehen.
                                         </p>
@@ -489,7 +489,7 @@ export default function Home() {
                                 img: "/Kafelki/Montageservice.png",
                                 details: (
                                     <>
-                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Wir bringen es an die Wand:</h4>
+                                        <h3 className="text-emerald-400 font-semibold mb-3 text-lg">Wir bringen es an die Wand:</h3>
                                         <p className="text-gray-300 mb-4 font-light leading-relaxed">
                                             Sie haben neu eingekauft oder sind gerade umgezogen? Wir unterstützen Sie beim Aufbau und der sicheren Befestigung Ihrer Einrichtung.
                                         </p>
@@ -516,7 +516,7 @@ export default function Home() {
                                 img: "/Kafelki/Silikon.png",
                                 details: (
                                     <>
-                                        <h4 className="text-emerald-400 font-semibold mb-3 text-lg">Schutz vor Feuchtigkeit:</h4>
+                                        <h3 className="text-emerald-400 font-semibold mb-3 text-lg">Schutz vor Feuchtigkeit:</h3>
                                         <p className="text-gray-300 mb-4 font-light leading-relaxed">
                                             Alte, rissige oder schimmelige Fugen sehen nicht nur unschön aus, sondern können zu Wasserschäden führen. Wir erneuern sie professionell.
                                         </p>
@@ -547,7 +547,6 @@ export default function Home() {
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: false, amount: 0.2 }}
                                     transition={{ duration: 0.6, ease: "easeOut" }}
-                                    // ZMIANA ZACHOWANIA PO KLIKNIĘCIU: Jeśli jest 'link', przenieś tam. Jeśli jest 'details', otwórz pop-up.
                                     onClick={() => {
                                         if (service.link) {
                                             navigate(service.link);
@@ -555,6 +554,17 @@ export default function Home() {
                                             setSelectedService(service);
                                         }
                                     }}
+                                    onKeyDown={(e) => {
+                                        if (e.key === "Enter" || e.key === " ") {
+                                            if (service.link) {
+                                                navigate(service.link);
+                                            } else if (service.details) {
+                                                setSelectedService(service);
+                                            }
+                                        }
+                                    }}
+                                    role="button"
+                                    tabIndex={0}
                                     className="group relative flex flex-col h-full rounded-2xl overflow-hidden bg-slate-900/40 border border-white/10 hover:border-emerald-500/50 hover:shadow-[0_0_30px_rgba(16,185,129,0.15)] hover:-translate-y-2 transition-colors duration-500 backdrop-blur-md cursor-pointer"
                                 >
                                     <div className="relative h-48 w-full overflow-hidden">
@@ -690,7 +700,7 @@ export default function Home() {
                                     <div className="w-24 h-24 mx-auto bg-slate-950 border-2 border-emerald-500 rounded-full flex items-center justify-center text-3xl font-black text-emerald-400 mb-6 shadow-[0_0_20px_rgba(16,185,129,0.2)]">
                                         {item.step}
                                     </div>
-                                    <h4 className="text-xl font-bold text-white mb-3">{item.title}</h4>
+                                    <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                                     <p className="text-gray-400 font-light text-sm md:text-base px-4">{item.desc}</p>
                                 </motion.div>
                             ))}
@@ -747,7 +757,7 @@ export default function Home() {
                                     )}
                                 </div>
 
-                                <h4 className="text-lg font-bold text-emerald-400 mb-1">{stat.label}</h4>
+                                <h3 className="text-lg font-bold text-emerald-400 mb-1">{stat.label}</h3>
                                 <p className="text-sm text-gray-400 font-light">{stat.desc}</p>
                             </motion.div>
                         ))}
@@ -821,15 +831,15 @@ export default function Home() {
                     </div>
 
                     {/* Dolna belka: Prawa i Linki prawne */}
-                    <div className="w-full flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 text-sm text-gray-500">
+                    <div className="w-full flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 text-sm text-gray-400">
                         <p className="mb-4 md:mb-0 text-center md:text-left font-light tracking-wide">
                             © {new Date().getFullYear()} Arasim & Kedzierski Gebäudeservice. Alle Rechte vorbehalten.
                         </p>
                         <div className="flex gap-8">
-                            <Link to="/impressum" className="hover:text-green-500 transition-colors duration-300 tracking-widest uppercase text-[10px]">
+                            <Link to="/impressum" className="hover:text-emerald-300 transition-colors duration-300 tracking-widest uppercase text-[10px]">
                                 Impressum
                             </Link>
-                            <Link to="/datenschutz" className="hover:text-green-500 transition-colors duration-300 tracking-widest uppercase text-[10px]">
+                            <Link to="/datenschutz" className="hover:text-emerald-300 transition-colors duration-300 tracking-widest uppercase text-[10px]">
                                 Datenschutz
                             </Link>
                         </div>
@@ -847,6 +857,7 @@ export default function Home() {
                         className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm"
                         // Zamknięcie modala po kliknięciu w tło
                         onClick={() => setSelectedService(null)}
+                        aria-modal="true"
                     >
                         <motion.div
                             initial={{ scale: 0.9, opacity: 0, y: 20 }}
@@ -856,6 +867,9 @@ export default function Home() {
                             className="relative w-full max-w-2xl bg-slate-900 border border-cyan-500/30 rounded-3xl shadow-[0_0_50px_rgba(6,182,212,0.15)] overflow-hidden flex flex-col max-h-[90vh]"
                             // Zatrzymanie zamykania, gdy klikniemy w same okienko
                             onClick={(e) => e.stopPropagation()}
+                            role="dialog"
+                            aria-modal="true"
+                            
                         >
                             {/* Nagłówek Modala ze zdjęciem w tle */}
                             <div className="relative h-40 sm:h-48 w-full overflow-hidden shrink-0">
