@@ -870,7 +870,7 @@ export default function Home() {
                         >
                             {/* Nagłówek Modala ze zdjęciem w tle */}
                             <div className="relative h-40 sm:h-48 w-full overflow-hidden shrink-0">
-                                <img src={selectedService.img} alt={selectedService.title} className="w-full h-full object-cover opacity-60" />
+                                <img src={selectedService.img} alt={selectedService.title} loading="eager" decoding="async" className="w-full h-full object-cover opacity-60" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
                                 {/* Przycisk zamykania (Krzyżyk) */}
                                 <button 
