@@ -56,7 +56,7 @@ export default function Impressum() {
                         </ul>
                     </section>
 
-                    <section>
+                    {/* <section>
                         <h2 className="text-2xl font-semibold text-emerald-400 mb-4 border-b border-white/10 pb-2">Umsatzsteuer-ID</h2>
                         <p>
                             Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
@@ -69,7 +69,7 @@ export default function Impressum() {
                         <p>
                             Gemäß § 19 UStG (Kleinunternehmerregelung) wird keine Umsatzsteuer berechnet und ausgewiesen.
                         </p>
-                    </section>
+                    </section> */}
 
                     <section>
                         <h2 className="text-2xl font-semibold text-emerald-400 mb-4 border-b border-white/10 pb-2">Angaben zur Berufshaftpflichtversicherung</h2>
