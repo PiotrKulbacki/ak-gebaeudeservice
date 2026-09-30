@@ -225,10 +225,6 @@ export default function ContactForm() {
                                     <option value="Winterdienst" className="bg-slate-900 text-white">Winterdienst</option>
                                     <option value="Entrümpelung & Umzug" className="bg-slate-900 text-white">Entrümpelung & Umzug</option>
                                     <option value="Fensterreinigung innen & außen" className="bg-slate-900 text-white">Fensterreinigung innen & außen</option>
-                                    <option value="Maler- & Spachtelarbeiten" className="bg-slate-900 text-white">Maler- & Spachtelarbeiten</option>
-                                    <option value="Kleinreparaturen" className="bg-slate-900 text-white">Kleinreparaturen</option>
-                                    <option value="Montageservice" className="bg-slate-900 text-white">Montageservice</option>
-                                    <option value="Silikon- & Fugenarbeiten" className="bg-slate-900 text-white">Silikon- & Fugenarbeiten</option>
                                     <option value="Andere" className="bg-slate-900 text-white">Andere</option>
                                 </select>
                             </div>
