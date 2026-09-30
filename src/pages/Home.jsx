@@ -44,7 +44,6 @@ export default function Home() {
     const items = [
         { label: 'Leistungen', href: '#leistungen' },
         { label: 'AK-Standard', href: '#ak-standard' },
-        { label: 'Philosophie', href: '/philosophie' },
         { label: 'Über uns', href: '#uberuns' },
     ];
 
